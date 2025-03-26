@@ -1,0 +1,35 @@
+2025-03-26 09:24:36,693 - INFO - Initializing Tkinter window...
+2025-03-26 09:24:37,577 - INFO - Drawing waveform for A
+2025-03-26 09:24:37,579 - INFO - Completed waveform for A
+2025-03-26 09:24:37,579 - INFO - Drawing waveform for B
+2025-03-26 09:24:37,579 - INFO - Completed waveform for B
+2025-03-26 09:24:37,579 - INFO - Drawing waveform for A AND B
+2025-03-26 09:24:37,579 - INFO - Completed waveform for A AND B
+2025-03-26 09:24:37,579 - INFO - Drawing waveform for A OR B
+2025-03-26 09:24:37,580 - INFO - Completed waveform for A OR B
+2025-03-26 09:24:37,580 - INFO - Drawing waveform for A NAND B
+2025-03-26 09:24:37,580 - INFO - Completed waveform for A NAND B
+2025-03-26 09:24:37,580 - INFO - Drawing waveform for A NOR B
+2025-03-26 09:24:37,580 - INFO - Completed waveform for A NOR B
+2025-03-26 09:24:37,580 - INFO - Drawing waveform for A XOR B
+2025-03-26 09:24:37,580 - INFO - Completed waveform for A XOR B
+2025-03-26 09:24:37,580 - INFO - Drawing waveform for A XNOR B
+2025-03-26 09:24:37,580 - INFO - Completed waveform for A XNOR B
+2025-03-26 09:24:37,580 - INFO - Displaying Tkinter GUI
+2025-03-26 09:28:13,224 - INFO - Starting waveform generation script.
+2025-03-26 09:28:13,224 - INFO - Input A: [0, 0, 1, 1]
+2025-03-26 09:28:13,224 - INFO - Input B: [0, 1, 0, 1]
+2025-03-26 09:28:13,224 - INFO - Generated repeated waveforms for A and B.
+2025-03-26 09:28:13,224 - INFO - Computed logic gate outputs.
+2025-03-26 09:28:13,360 - INFO - Plotting Input A waveform.
+2025-03-26 09:28:13,371 - INFO - Plotting Input B waveform.
+2025-03-26 09:28:13,378 - INFO - Plotting AND Output waveform.
+2025-03-26 09:28:13,387 - INFO - Plotting OR Output waveform.
+2025-03-26 09:28:13,395 - INFO - Plotting NOT A waveform.
+2025-03-26 09:28:13,404 - INFO - Plotting NOT B waveform.
+2025-03-26 09:28:13,412 - INFO - Plotting XOR Output waveform.
+2025-03-26 09:28:13,419 - INFO - Plotting XNOR Output waveform.
+2025-03-26 09:28:13,426 - INFO - Plotting NAND Output waveform.
+2025-03-26 09:28:13,434 - INFO - Plotting NOR Output waveform.
+2025-03-26 09:28:13,443 - INFO - All waveforms plotted successfully.
+2025-03-26 09:28:20,724 - INFO - Waveform visualization displayed successfully.
