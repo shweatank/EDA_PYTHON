@@ -1,4 +1,4 @@
-import unittest
+import pytest
 
 
 def and_gate(a: int, b: int):
@@ -56,12 +56,3 @@ def test_or_gate():
 def test_not_gate():
     assert not_gate(0) == 1
     assert not_gate(1) == 0
-
-
-test_suite = unittest.TestSuite()
-test_suite.addTest(unittest.FunctionTestCase(test_and_gate))
-test_suite.addTest(unittest.FunctionTestCase(test_or_gate))
-test_suite.addTest(unittest.FunctionTestCase(test_not_gate))
-
-runner = unittest.TextTestRunner()
-runner.run(test_suite)
