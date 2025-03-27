@@ -50,6 +50,7 @@ def test_NOR(a,b,expected):
     (1,0,1),
     (1,1,0)
 ])
+
 def test_XOR(a,b,expected):
     assert XOR(a,b)==expected
 
@@ -59,7 +60,10 @@ def test_XOR(a,b,expected):
     (1,0,0),
     (1,1,1)
 ])
+
 def test_XNOR(a,b,expected):
     assert XNOR(a,b)==expected
+
+
 
 
