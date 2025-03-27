@@ -15,16 +15,15 @@ def FullAdder(A, B, Cin, Sum, Cout):
 
 # Function to get timestamp for logging
 def get_timestamp():
-    return time.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3]  # Format: YYYY-MM-DD HH:MM:SS,MS
+    return time.strftime("%Y-%m-%d %H:%M:%S,%f")[:-3]  
 
 
 # Simulation function
 def simulate_full_adder():
-    """ Simulates the Full Adder circuit and logs results to a file """
 
     log_filename = "full_adder_simulation.txt"
 
-    with open(log_filename, "a") as log_file:  # Open file in write mode (overwrite existing)
+    with open(log_filename, "a") as log_file:  
 
         def log_message(level, message):
             """Write logs in the required format"""
