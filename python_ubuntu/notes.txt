@@ -1,0 +1,16 @@
+note
+-y means yes
+apt means Advanced Package Tool
+A VCD (Value Change Dump) file used in digital circuit simulation to store signal transitions over time
+
+
+lsb_release -a
+
+apt list
+
+sudo apt install python3-myhdl
+
+sudo apt install python3-pip
+
+sudo apt install git
+

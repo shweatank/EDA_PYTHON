@@ -1,0 +1,36 @@
+$date
+    Thu Mar 27 06:18:07 2025
+$end
+$version
+    MyHDL 0.11
+$end
+$timescale
+    1ns
+$end
+
+$scope module and_bench $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 # c $end
+$scope module and_inst $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 # c $end
+$upscope $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+0!
+0"
+0#
+$end
+#10
+1"
+#20
+1!
+0"
+#30
+1"
+1#
+#40
