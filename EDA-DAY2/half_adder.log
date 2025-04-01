@@ -1,0 +1,8 @@
+SUM(0, 0) -> Output: 0, Expected: 0, Time: 0.0000006610 sec
+CARRY(0, 0) -> Output: 0, Expected: 0, Time: 0.0000004200 sec
+SUM(0, 1) -> Output: 1, Expected: 1, Time: 0.0000008500 sec
+CARRY(0, 1) -> Output: 0, Expected: 0, Time: 0.0000006690 sec
+SUM(1, 0) -> Output: 1, Expected: 1, Time: 0.0000007050 sec
+CARRY(1, 0) -> Output: 0, Expected: 0, Time: 0.0000004710 sec
+SUM(1, 1) -> Output: 0, Expected: 0, Time: 0.0000007090 sec
+CARRY(1, 1) -> Output: 1, Expected: 1, Time: 0.0000006710 sec
