@@ -1,0 +1,333 @@
+EDA[ELECTRICAL DIGITAL AUTOMATION].
+---------------------------------------
+Current: The flow of electric charge; the direction of current is opposite to the flow of electrons.
+     |         current flow
+     |-------->-----
+        <-------    |
+     electrons flow |
+                     low voltage.
+Electric Field: A region around electric charges where forces act on other charges.
+
+Magnetic Field: A field created by moving electric charges, unlike an electric field created by stationary charges.
+
+Conductor vs. Insulator:
+
+Conductor: Materials (e.g., metals) that allow the flow of electricity and heat.
+
+Insulator: Materials (e.g., rubber, glass) that resist electricity and heat flow.
+
+DIGITAL ELECTRONICS:
+====================
+Digital electronics processes signals that are represented as discrete values, typically 0 (low voltage) and 1 (high voltage).
+-->represents discrete values(0,1)
+0-----------no voltage(0v)
+1-----------full voltage(5v)
+
+
+BIPOLAR JUNCTION TRANSISTORS:
+-----------------------------
+It is a current controlled device.
+The three terminals of the BJT are the base, the collector, and the emitter.
+
+
+BASE:[like a gate to handle the current flow]
+----
+base that controls the current flow between the emitter and collector.
+base forms two circuits,the input circuits with the emitter and the output circuit with controller.
+
+EMITTER:
+--------
+the emitter is heavily doped and supplies the majority charge carriers(holes in NPN,electrons in PNP transistors).
+emitter based junction is forward biased.
+-->typically input terminal.
+
+COLLECTOR:
+---------
+The collector is moderately doped and collects the majority charge carriers supplied by the emitter.
+The collector-base junction is reverse-biased.
+-->typically output terminal.
+
+characterized by their semiconductor material structure:
+========================================================
+    NPN:1[appiled],0[not applicable]
++++++++++++++++++++++++++++++++++++++
+      Consists of a thin, positively-doped (P-type) semiconductor material sandwiched between two negatively-doped (N-type) materials.
+      When a positive voltage is applied to the base, a larger current flows from the collector to the emitter.
+       NPN transistors are often referred to as "sinking" because they sink current from the load into the output.
+       Widely used in amplifiers, switches, and logic gates.
+
+
+     PNP:0[appiled],1[not applicable].
+++++++++++++++++++++++++++++++++++++++
+    Consists of a thin, negatively-doped (N-type) semiconductor material sandwiched between two positively-doped (P-type) materials.
+    When a negative voltage is applied to the base, a larger current flows from the emitter to the collector.
+    PNP transistors are often referred to as "sourcing" because they source current from the output to the load.
+    Used in circuits where the current flows from positive to negative.
+
+
+RESISTOR:
+========
+resistor is an electronic component that limits or regulates the flow of electrical current in elctrical circuit.
+                                         -------------------
+resistor can be used to provide a specific voltage for an active device such as transistor.
+-->it is also used to control the current flow,adjust the signal levels,divide the voltages,
+bias active devices,terminate transmission lines in a circuit.
+
+CAPACITOR:
+==========
+capacitor can be used to store the electrical energy in the form of electrical field and acting like a small ,rechargable batteries.
+the basic capacitor consists of two conductive plates[conductors] seperated by insulating material called as dielectric.
+                                                                                                             -----------
+RESITIVITY:
+===========
+resitivity is a property that describe the extent to which material opposes the flow of electric current through it.
+
+     RESISTANCE                               VS                          RESISTIVITY
+
+    --->resistance is a measure of                       ---->resistivity is the property of a material
+     how much a specific object opposes                     that describes how much it resists the current flow
+     the flow of electrical current.                         regardless it shape and size.
+
+      R=rho*L/A                                                rho=R*A/L
+                           R-Resistance
+                           A--cross-sectional area
+                           L-length
+
+ANALOG AND DIGITAL:
+==================
+                      ANALOG                                     VS                            DIGITAL
+
+         Analog signals represent information as contionus                  digital signal represent as a discrete value(0,1)
+waveform.meaning they can take on any value with in a range.
+
+No data protection                                                                  Data protection[Encrypt & Decrypt]
+
+NOissy environment                                                                   Not effected by noise
+
+not easy to design because of complete hardware                                       Easy to design
+
+unprogrammable                                                                        Programmable
+
+more power consumptiom                                                                less power consumption
+
+hardware is not flexible                                                              hardware is flexible
+
+Sine waves                                                                           Square waves
+
+Examples:---Human voice in air,analog electronics devices.                Examples:---computers,CDs,DVDs
+
+
+DIODE:
+======
+It is semiconductor device which allows current to flow in uni-direction,while blocking the others.
+
+we used to control the flow of direction in a circuit.
+  p-type----->majority of holes
+  n-type----->majority of electrons
+when the diode is forward bias,it allow current to flow.
+when the diode is reverse bias,the holes pulled towards the negative and electrons pulled towards the positive and this cause the barrier to expand.
+Therefore,the diode act as a insulator to prevent the flow of exceution.
+
+
+SEMI-CONDUCTOR:
+===============
+semiconductor is a material with electrical conductivity between a conductor
+and insulator.used in electronic devices like diodes,transistors,IC[integrated circuits].
+
+semiconductor has a unique property of allowing electricity to flow,
+but not as readily as conductors (like metals) or insulators (like glass).
+
+
+GATES:
+======
+fundamental electronic circuits that perform logical operations on binary inputs
+(0 or 1) to produce a single binary output, forming the building blocks of digital systems.
+it is a combination of transistors.
+
+Types of Logic Gates:
+
+AND Gate: Outputs 1 only if all inputs are 1.
+    X  Y  O/P
+    0  0  0
+    0  1  0
+    1  0  0
+    1  1  1
+OR Gate: Outputs 1 if at least one input is 1.
+    X  Y  O/P
+    0  0  0
+    0  1  1
+    1  0  1
+    1  1  1
+NOT Gate: Inverts the input (0 becomes 1, and 1 becomes 0).
+    X O/P
+    0  1
+    1  0
+NAND Gate: Outputs the inverse of an AND gate.
+    X  Y  O/P
+    0  0  1
+    0  1  1
+    1  0  1
+    1  1  0
+NOR Gate: Outputs the inverse of an OR gate.
+    X  Y  O/P
+    0  0  1
+    0  1  0
+    1  0  0
+    1  1  0
+XOR Gate: Outputs 1 if the inputs are different.
+    X  Y  O/P
+    0  0  0
+    0  1  1
+    1  0  1
+    1  1  0
+XNOR Gate: Outputs 1 if the inputs are the same.
+    X  Y  O/P
+    0  0  1
+    0  1  0
+    1  0  1
+    1  1  0
+
+
+Logic gates are essential for building digital circuits, computers, calculators, and other electronic devices.
+NAND and NOR gates are considered universal gates because any other logic gate can be constructed using only these two types.
+----     ---
+
+HALF ADDER AND FULL ADDER:
+==========================
+HALF ADDER:
+++++++++++
+ A combinational logic circuit that adds two single-bit binary numbers (A and B).
+ Sum (S): The result of the addition without considering any carry.
+ Carry (C): A carry-out bit, which is 1 if the sum is greater than or equal to 2 (10 in binary).
+
+         Sum (S) = A XOR B (Exclusive OR)
+         Carry (C) = A AND B (AND)
+
+Used in the initial stages of adding multi-bit numbers, or in applications where only two bits need to be added.
+
+FULL ADDER:
++++++++++++
+ A combinational logic circuit that adds three single-bit binary numbers (A, B, and carry-in (Cin)).
+ Sum (S): The result of the addition, considering the carry-in.
+ Carry-out (Cout): A carry-out bit, which is 1 if the sum is greater than or equal to 2.
+
+          Sum (S) = (A XOR B) XOR Cin
+          Carry-out (Cout) = (A AND B) OR (Cin AND (A XOR B))
+
+Used in the main stages of adding multi-bit numbers, as it handles carry-in from previous stages.
+A full adder can be built using two half adders and an OR gate.
+
+LSI VS MSI VS VLSI:
+===================
+
+LARGE SCALE INTEGRATED CIRCUIT:
++++++++++++++++++++++++++++++++
+Integrates thousands to tens of thousands of transistors, enabling more complex components like microprocessors and memory chips.
+
+MEDIUM SCALE INTEGRATED CIRCUIT:
+++++++++++++++++++++++++++++++++
+Integrates tens to hundreds of transistors on a single chip, enabling moderately complex functions like multiplexers and encoders.
+
+VERY LARGE SCALE INTEGRATED CIRCUIT:
+++++++++++++++++++++++++++++++++++++
+Integrates hundreds of thousands to millions of transistors on a single chip, enabling advanced microprocessors and sophisticated integrated circuits.
+VLSI circuits are used everywhere, including microprocessors in a personal computer, chips in a graphic card, digital camera or camcorder,
+chips in a cell phone, embedded processors,and safety systems like anti-lock braking systems in an automobile,
+personal entertainment systems, medical electronic systems etc.
+
+
+MOS TRANSISTORS:
+================
+MOS--->Metal-Oxide-Semiconductor
+essential building blocks in modern electronics, acting as switches or amplifiers
+by controlling current flow between source and drain terminals through a voltage applied to the gate.
+
+NMOS (N-channel MOSFET): Majority carriers are electrons, and a positive gate voltage enhances conductivity.
+PMOS (P-channel MOSFET): Majority carriers are holes, and a negative gate voltage enhances conductivity.
+
+Applications:
+++++++++++++++
+MOSFETs are used in a wide range of applications, including:
+Microprocessors
+Memory chips
+Power converters
+Switching devices
+Amplifiers
+
+Advantages:
++++++++++++
+High Speed:
+MOSFETs can switch very quickly.
+Low Power Consumption:
+They consume less power than bipolar junction transistors (BJTs).
+Scalability:
+They are easily scaled down to create smaller and more complex integrated circuits.
+
+MOSFET vs BJT:
+===============
+MOSFET:
+------
+Voltage-controlled, uses field effect to control current flow, has high input impedance.
+
+BJT:
+----
+Current-controlled, uses current flow through the base to control current
+flow between collector and emitter, has lower input impedance.
+
+MOS Capacitor:
+-----------------------
+A simpler device than a MOSFET, it has a similar construction but lacks the source
+and drain terminals. The gate and body create a small capacitor that can store an electric charge.
+
+CMOS Inverter
+------------------------
+CMOS Inverter
+A CMOS (Complementary Metal-Oxide-Semiconductor) Inverter is a fundamental digital logic gate built using CMOS technology. It inverts a binary input signal (i.e., if the input is 0, the output will be 1, and if the input is 1, the output will be 0). CMOS inverters are widely used due to their low power consumption and high noise immunity.
+Field-Effect Transistor (FET)
+A Field-Effect Transistor (FET) is a type of transistor that uses an electric field to control the flow of current in a semiconductor channel. FETs are widely used in electronic devices and circuits due to their efficiency, high input impedance, and low power consumption. The most common types of FETs are MOSFETs (Metal-Oxide-Semiconductor Field-Effect Transistors), which are the foundation of most modern electronic devices.
+
+vlsi design flow diagram
+--------------------------------
++---------------------------+
+|    System Specification    |
++---------------------------+
+               |
+               V
++---------------------------+
+|    Architectural Design    |
++---------------------------+
+               |
+               V
++---------------------------+
+|  Functional & Logic Design |
++---------------------------+
+               |
+               V
++---------------------------+
+|        Circuit Design      |
++---------------------------+
+               |
+               V
++---------------------------+
+|      Physical Design       |
++---------------------------+
+               |
+               V
++---------------------------+
+|  Physical Verification     |
++---------------------------+
+               |
+               V
++---------------------------+
+|        Fabrication         |
++---------------------------+
+               |
+               V
++---------------------------+
+|  Packaging & Testing       |
++---------------------------+
+               |
+               V
++---------------------------+
+|           Chip             |
++---------------------------+
