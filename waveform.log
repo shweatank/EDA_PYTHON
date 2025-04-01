@@ -1,0 +1,17 @@
+2025-03-27 10:23:33,801 - INFO - Starting waveform generation script.
+2025-03-27 10:23:33,801 - INFO - Input A: [0, 0, 1, 1]
+2025-03-27 10:23:33,801 - INFO - Input B: [0, 1, 0, 1]
+2025-03-27 10:23:33,801 - INFO - Generated repeated waveforms for A and B.
+2025-03-27 10:23:33,801 - INFO - Computed logic gate outputs.
+2025-03-27 10:23:33,849 - INFO - Plotting Input A waveform.
+2025-03-27 10:23:33,862 - INFO - Plotting Input B waveform.
+2025-03-27 10:23:33,872 - INFO - Plotting AND Output waveform.
+2025-03-27 10:23:33,881 - INFO - Plotting OR Output waveform.
+2025-03-27 10:23:33,890 - INFO - Plotting NOT A waveform.
+2025-03-27 10:23:33,900 - INFO - Plotting NOT B waveform.
+2025-03-27 10:23:33,909 - INFO - Plotting XOR Output waveform.
+2025-03-27 10:23:33,919 - INFO - Plotting XNOR Output waveform.
+2025-03-27 10:23:33,933 - INFO - Plotting NAND Output waveform.
+2025-03-27 10:23:33,942 - INFO - Plotting NOR Output waveform.
+2025-03-27 10:23:33,952 - INFO - All waveforms plotted successfully.
+2025-03-27 10:23:40,369 - INFO - Waveform visualization displayed successfully.
