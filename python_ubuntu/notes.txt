@@ -3,6 +3,9 @@ note
 apt means Advanced Package Tool
 A VCD (Value Change Dump) file used in digital circuit simulation to store signal transitions over time
 
+python3 [filename]
+
+sudo gtkwave [filename.vcd]
 
 lsb_release -a
 
