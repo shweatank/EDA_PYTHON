@@ -1,0 +1,41 @@
+$date
+    Fri Mar 28 06:04:35 2025
+$end
+$version
+    MyHDL 0.11
+$end
+$timescale
+    1ns
+$end
+
+$scope module halfadder_bench $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 # c $end
+$var reg 1 $ s $end
+$scope module halfadder_inst $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 $ s $end
+$var reg 1 # c $end
+$upscope $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+0!
+0"
+0#
+0$
+$end
+#10
+1"
+1$
+#20
+1!
+0"
+#30
+1"
+0$
+1#
+#40
