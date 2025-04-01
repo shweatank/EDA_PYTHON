@@ -1,0 +1,9 @@
+Execution Log - Half Adder Tests
+half_adder_sum(0, 0) => Expected: 0, Got: 0, Time: 0.0000010730 sec
+half_adder_sum(0, 1) => Expected: 1, Got: 1, Time: 0.0000008560 sec
+half_adder_sum(1, 0) => Expected: 1, Got: 1, Time: 0.0000021080 sec
+half_adder_sum(1, 1) => Expected: 0, Got: 0, Time: 0.0000108450 sec
+half_adder_carry(0, 0) => Expected: 0, Got: 0, Time: 0.0000011590 sec
+half_adder_carry(0, 1) => Expected: 0, Got: 0, Time: 0.0000007020 sec
+half_adder_carry(1, 0) => Expected: 0, Got: 0, Time: 0.0000013490 sec
+half_adder_carry(1, 1) => Expected: 1, Got: 1, Time: 0.0000010810 sec
