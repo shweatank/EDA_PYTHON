@@ -1,8 +1,0 @@
-TEST: half_adder(0, 0) -> Expected: 0, Got: 0, Execution Time: 0.000000 sec
-TEST: half_adder(0, 1) -> Expected: 1, Got: 1, Execution Time: 0.000001 sec
-TEST: half_adder(1, 0) -> Expected: 1, Got: 1, Execution Time: 0.000000 sec
-TEST: half_adder(1, 1) -> Expected: 0, Got: 0, Execution Time: 0.000000 sec
-TEST: half_adder_carry(0, 0) -> Expected: 0, Got: 0, Execution Time: 0.000001 sec
-TEST: half_adder_carry(0, 1) -> Expected: 0, Got: 0, Execution Time: 0.000001 sec
-TEST: half_adder_carry(1, 0) -> Expected: 0, Got: 0, Execution Time: 0.000000 sec
-TEST: half_adder_carry(1, 1) -> Expected: 1, Got: 1, Execution Time: 0.000000 sec
