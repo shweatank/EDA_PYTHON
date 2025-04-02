@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gates Simulator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .gate { margin: 20px; padding: 10px; border: 2px solid #000; display: inline-block; }
+        button { margin: 5px; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Logic Gates Simulator</h2>
+
+    <div class="gate">
+        <h3>AND Gate</h3>
+        <button onclick="logicAND(0, 0)">0, 0</button>
+        <button onclick="logicAND(0, 1)">0, 1</button>
+        <button onclick="logicAND(1, 0)">1, 0</button>
+        <button onclick="logicAND(1, 1)">1, 1</button>
+        <p>Output: <span id="andResult">-</span></p>
+    </div>
+
+    <div class="gate">
+        <h3>OR Gate</h3>
+        <button onclick="logicOR(0, 0)">0, 0</button>
+        <button onclick="logicOR(0, 1)">0, 1</button>
+        <button onclick="logicOR(1, 0)">1, 0</button>
+        <button onclick="logicOR(1, 1)">1, 1</button>
+        <p>Output: <span id="orResult">-</span></p>
+    </div>
+
+    <div class="gate">
+        <h3>NOT Gate</h3>
+        <button onclick="logicNOT(0)">0</button>
+        <button onclick="logicNOT(1)">1</button>
+        <p>Output: <span id="notResult">-</span></p>
+    </div>
+
+    <script>
+        function logicAND(a, b) {
+            document.getElementById("andResult").innerText = a & b;
+        }
+        function logicOR(a, b) {
+            document.getElementById("orResult").innerText = a | b;
+        }
+        function logicNOT(a) {
+            document.getElementById("notResult").innerText = a ? 0 : 1;
+        }
+    </script>
+</body>
+</html>
