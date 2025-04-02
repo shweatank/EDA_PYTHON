@@ -1,0 +1,51 @@
+home.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Logic Gates Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px auto;
+            display: inline-block;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital Logic Gates Simulator</h1>
+    <p>Click a button to simulate a logic gate:</p>
+    <button class="btn" onclick="location.href='/simulate/and_gate'">AND Gate</button>
+    <button class="btn" onclick="location.href='/simulate/nand_gate'">NAND Gate</button>
+    <button class="btn" onclick="location.href='/simulate/or_gate'">OR Gate</button>
+    <button class="btn" onclick="location.href='/simulate/nor_gate'">NOR Gate</button>
+    <button class="btn" onclick="location.href='/simulate/xor_gate'">XOR Gate</button>
+    <button class="btn" onclick="location.href='/simulate/xnor_gate'">XNOR Gate</button>
+    <button class="btn" onclick="location.href='/simulate/not_gate'">NOT Gate</button>
+</body>
+</html>
