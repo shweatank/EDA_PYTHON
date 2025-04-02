@@ -1,0 +1,93 @@
+2025-04-02 10:00:27,364 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:00:27,364 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:00:27,365 -  * Restarting with stat
+2025-04-02 10:00:27,460 -  * Debugger is active!
+2025-04-02 10:00:27,461 -  * Debugger PIN: 691-502-117
+2025-04-02 10:00:34,851 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:00:34,851 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:00:34,852 -  * Restarting with stat
+2025-04-02 10:00:34,948 -  * Debugger is active!
+2025-04-02 10:00:34,948 -  * Debugger PIN: 691-502-117
+2025-04-02 10:00:54,716 - 127.0.0.1 - - [02/Apr/2025 10:00:54] "GET / HTTP/1.1" 200 -
+2025-04-02 10:01:36,179 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:01:36,179 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:01:36,179 -  * Restarting with stat
+2025-04-02 10:01:36,274 -  * Debugger is active!
+2025-04-02 10:01:36,274 -  * Debugger PIN: 691-502-117
+2025-04-02 10:03:35,569 -  * Detected change in '/home/mirafra/PycharmProjects/EDA_PYTHON/all_logics_flask_code.py', reloading
+2025-04-02 10:03:35,599 -  * Restarting with stat
+2025-04-02 10:03:35,704 -  * Debugger is active!
+2025-04-02 10:03:35,705 -  * Debugger PIN: 691-502-117
+2025-04-02 10:04:04,836 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:04:04,836 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:04:04,837 -  * Restarting with stat
+2025-04-02 10:04:04,932 -  * Debugger is active!
+2025-04-02 10:04:04,932 -  * Debugger PIN: 691-502-117
+2025-04-02 10:04:40,565 - 127.0.0.1 - - [02/Apr/2025 10:04:40] "GET / HTTP/1.1" 200 -
+2025-04-02 10:04:53,471 - Full Adder -> Inputs: A=0, B=0, Cin=1, Output: Sum=1, Carry=0
+2025-04-02 10:04:53,472 - 127.0.0.1 - - [02/Apr/2025 10:04:53] "POST / HTTP/1.1" 200 -
+2025-04-02 10:04:53,487 - 127.0.0.1 - - [02/Apr/2025 10:04:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-02 10:11:44,292 -  * Detected change in '/home/mirafra/PycharmProjects/EDA_PYTHON/all_logics_flask_code.py', reloading
+2025-04-02 10:11:44,315 -  * Restarting with stat
+2025-04-02 10:48:59,889 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:48:59,889 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:48:59,889 -  * Restarting with stat
+2025-04-02 10:48:59,990 -  * Debugger is active!
+2025-04-02 10:48:59,990 -  * Debugger PIN: 691-502-117
+2025-04-02 10:49:07,809 - 127.0.0.1 - - [02/Apr/2025 10:49:07] "GET / HTTP/1.1" 200 -
+2025-04-02 10:49:08,955 - 127.0.0.1 - - [02/Apr/2025 10:49:08] "GET / HTTP/1.1" 200 -
+2025-04-02 10:49:09,119 - 127.0.0.1 - - [02/Apr/2025 10:49:09] "GET / HTTP/1.1" 200 -
+2025-04-02 10:49:09,285 - 127.0.0.1 - - [02/Apr/2025 10:49:09] "GET / HTTP/1.1" 200 -
+2025-04-02 10:49:09,466 - 127.0.0.1 - - [02/Apr/2025 10:49:09] "GET / HTTP/1.1" 200 -
+2025-04-02 10:49:13,380 - 127.0.0.1 - - [02/Apr/2025 10:49:13] "GET / HTTP/1.1" 200 -
+2025-04-02 10:49:26,859 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:49:26,859 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:49:26,859 -  * Restarting with stat
+2025-04-02 10:49:26,956 -  * Debugger is active!
+2025-04-02 10:49:26,957 -  * Debugger PIN: 691-502-117
+2025-04-02 10:50:01,119 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:50:01,119 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:50:01,120 -  * Restarting with stat
+2025-04-02 10:50:01,218 -  * Debugger is active!
+2025-04-02 10:50:01,219 -  * Debugger PIN: 691-502-117
+2025-04-02 10:50:13,902 - 127.0.0.1 - - [02/Apr/2025 10:50:13] "GET / HTTP/1.1" 200 -
+2025-04-02 10:50:17,330 - 127.0.0.1 - - [02/Apr/2025 10:50:17] "GET /simulate/AND HTTP/1.1" 200 -
+2025-04-02 10:50:21,507 - 127.0.0.1 - - [02/Apr/2025 10:50:21] "GET /download/AND.vcd HTTP/1.1" 200 -
+2025-04-02 10:51:23,135 - 127.0.0.1 - - [02/Apr/2025 10:51:23] "GET /logs HTTP/1.1" 200 -
+2025-04-02 10:51:31,131 - 127.0.0.1 - - [02/Apr/2025 10:51:31] "GET / HTTP/1.1" 200 -
+2025-04-02 10:53:35,898 -  * Detected change in '/home/mirafra/PycharmProjects/EDA_PYTHON/all_logics_flask_code.py', reloading
+2025-04-02 10:53:35,923 -  * Restarting with stat
+2025-04-02 10:53:36,064 -  * Debugger is active!
+2025-04-02 10:53:36,065 -  * Debugger PIN: 691-502-117
+2025-04-02 10:54:10,487 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:54:10,487 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:54:10,487 -  * Restarting with stat
+2025-04-02 10:54:10,595 -  * Debugger is active!
+2025-04-02 10:54:10,595 -  * Debugger PIN: 691-502-117
+2025-04-02 10:54:15,751 - 127.0.0.1 - - [02/Apr/2025 10:54:15] "GET / HTTP/1.1" 200 -
+2025-04-02 10:54:36,882 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 10:54:36,882 - [33mPress CTRL+C to quit[0m
+2025-04-02 10:54:36,882 -  * Restarting with stat
+2025-04-02 10:54:36,995 -  * Debugger is active!
+2025-04-02 10:54:36,995 -  * Debugger PIN: 691-502-117
+2025-04-02 10:54:42,661 - 127.0.0.1 - - [02/Apr/2025 10:54:42] "GET / HTTP/1.1" 200 -
+2025-04-02 10:54:46,080 - 127.0.0.1 - - [02/Apr/2025 10:54:46] "[35m[1mGET /simulate/AND HTTP/1.1[0m" 500 -
+2025-04-02 10:54:46,095 - 127.0.0.1 - - [02/Apr/2025 10:54:46] "GET /simulate/AND?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-02 10:54:46,096 - 127.0.0.1 - - [02/Apr/2025 10:54:46] "GET /simulate/AND?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-02 10:54:46,123 - 127.0.0.1 - - [02/Apr/2025 10:54:46] "GET /simulate/AND?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-02 10:54:46,126 - 127.0.0.1 - - [02/Apr/2025 10:54:46] "GET /simulate/AND?__debugger__=yes&cmd=resource&f=console.png&s=7Km8s1oaUkJSWpuhOyt4 HTTP/1.1" 200 -
+2025-04-02 10:55:15,058 - 127.0.0.1 - - [02/Apr/2025 10:55:15] "GET / HTTP/1.1" 200 -
+2025-04-02 10:55:17,139 - 127.0.0.1 - - [02/Apr/2025 10:55:17] "[35m[1mGET /simulate/XNOR HTTP/1.1[0m" 500 -
+2025-04-02 10:55:17,151 - 127.0.0.1 - - [02/Apr/2025 10:55:17] "GET /simulate/XNOR?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-02 10:55:17,151 - 127.0.0.1 - - [02/Apr/2025 10:55:17] "GET /simulate/XNOR?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-02 10:55:17,176 - 127.0.0.1 - - [02/Apr/2025 10:55:17] "GET /simulate/XNOR?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-02 10:55:17,180 - 127.0.0.1 - - [02/Apr/2025 10:55:17] "GET /simulate/XNOR?__debugger__=yes&cmd=resource&f=console.png&s=7Km8s1oaUkJSWpuhOyt4 HTTP/1.1" 200 -
