@@ -1,21 +1,38 @@
-note
--y means yes
-apt means Advanced Package Tool
-A VCD (Value Change Dump) file used in digital circuit simulation to store signal transitions over time
+Note
+1. -y means yes
+2. apt means Advanced Package Tool
+3. A VCD (Value Change Dump) file used in digital circuit simulation to store signal transitions over time
 
-python3 [filename]
+>> python3 [filename]
 
-sudo gtkwave [filename.vcd]
+>> sudo gtkwave [filename.vcd]
 
-lsb_release -a
+>> lsb_release -a
 
-apt list
+>> apt list
 
-sudo apt install python3-myhdl
+>> sudo apt install python3-myhdl
 
-sudo apt install python3-pip
+>> sudo apt install python3-pip
 
-sudo apt install git
+>> sudo apt install git
 
-sudo apt install python3-flask
+>> sudo apt install python3-flask
 
+Virtual Environment
+
+>> python3 -m venv .venv
+
+>> source .venv/bin/activate (Ubuntu)
+>> .venv\Scripts\activate (Windows)
+
+>> deactivate
+
+
+
+>> pip install cocotb
+>> pip show cocotb
+>> sudo apt install iverilog gtkwave
+>> iverilog -V
+>> sudo apt install make
+>> SIM=icarus TOPLEVEL=nand_gate MODULE=test_nand make

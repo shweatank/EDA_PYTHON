@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1743659868" />
+    <testcase name="test_nand_gate" classname="test_nand_gate" file="/home/sharathm/Documents/EDA_PYTHON/day 6/test_nand_gate.py" lineno="4" time="0.0005879402160644531" sim_time_ns="40.001" ratio_time="68035.82899594484" />
+  </testsuite>
+</testsuites>
