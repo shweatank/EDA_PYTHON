@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gates</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn button {
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+
+        .msg pre{
+            margin-top: 30px;
+            text-align: center;
+        }
+
+    </style>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Logic Gates</h1>
+    <div class="btn">
+        <button onclick="triggerGate('/and_gate')">AND</button>
+        <button onclick="triggerGate('/or_gate')">OR</button>
+        <button onclick="triggerGate('/not_gate')">NOT</button>
+    </div>
+    <div class="msg"></div>
+</body>
+</html>
