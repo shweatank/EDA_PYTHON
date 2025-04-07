@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gates Simulator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Logic Gates Simulator</h1>
+        <div class="form-group">
+            <label for="gate">Select Gate:</label>
+            <select id="gate" class="form-control">
+                <option value="and_gate">AND</option>
+                <option value="or_gate">OR</option>
+                <option value="not_gate">NOT</option>
+                <option value="nand_gate">NAND</option>
+                <option value="nor_gate">NOR</option>
+                <option value="xor_gate">XOR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputA">Input A:</label>
+            <input type="text" id="inputA" class="form-control" placeholder="0 or 1">
+        </div>
+        <div class="form-group">
+            <label for="inputB">Input B:</label>
+            <input type="text" id="inputB" class="form-control" placeholder="0 or 1">
+        </div>
+        <button id="calculate" class="btn btn-primary">Calculate</button>
+        <button id="simulate" class="btn btn-success">Simulate</button>
+        <h3 class="mt-4">Output: <span id="output"></span></h3>
+        <div class="alert alert-danger mt-3" id="error" style="display:none;"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#calculate').click(function() {
+                const gate = $('#gate').val();
+                const inputA = parseInt($('#inputA').val());
+                const inputB = parseInt($('#inputB').val());
+
+                $.ajax({
+                    url: '/logic',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ gate: gate.split('_')[0].toUpperCase(), input_a: inputA, input_b: inputB }),
+                    success: function(response) {
+                        $('#output').text(response.output);
+                        $('#error').hide();
+                    },
+                    error: function() {
+                        $('#error').text('Error calculating output').show();
+                    }
+                });
+            });
+
+            $('#simulate').click(function() {
+                const gate = $('#gate').val();
+                $.ajax({
+                    url: `/simulate/${gate}`,
+                    type: 'GET',
+                    success: function(response) {
+                        $('#output').text(response.message);
+                        $('#error').hide();
+                    },
+                    error: function() {
+                        $('#error').text('Error during simulation').show();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

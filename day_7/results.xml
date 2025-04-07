@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1743762978" />
+    <testcase name="test_nor_gate" classname="test_cases.test_nor_gate" file="/home/mirafra/PycharmProjects/PythonProjectEDA/day_7/test_cases/test_nor_gate.py" lineno="4" time="0.0013227462768554688" sim_time_ns="40.001" ratio_time="30240.871359769284" />
+  </testsuite>
+</testsuites>

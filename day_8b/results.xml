@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1743770336" />
+    <testcase name="adder_basic_test" classname="test_adder" file="/home/mirafra/PycharmProjects/PythonProjectEDA/day_8b/test_adder.py" lineno="5" time="0.002692699432373047" sim_time_ns="40.001" ratio_time="14855.352780591464" />
+  </testsuite>
+</testsuites>

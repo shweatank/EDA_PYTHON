@@ -1,0 +1,5 @@
+Timestamp,Test,Input,Expected,Actual,Status
+2025-04-04T12:21:15.145601,not_gate,0,1,1,PASS
+2025-04-04T12:21:15.145846,not_gate,1,0,0,PASS
+2025-04-04T14:43:46.728024,not_gate,0,1,1,PASS
+2025-04-04T14:43:46.728409,not_gate,1,0,0,PASS
