@@ -1,0 +1,41 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5b5660971b00 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x5b566094c510 .scope module, "not_gate" "not_gate" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "Y";
+o0x751ab20cf018 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x5b5660994d50 .functor NOT 1, o0x751ab20cf018, C4<0>, C4<0>, C4<0>;
+v0x5b566094c830_0 .net "A", 0 0, o0x751ab20cf018;  0 drivers
+v0x5b5660994c30_0 .net "Y", 0 0, L_0x5b5660994d50;  1 drivers
+S_0x5b566094c6a0 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 4 1;
+ .timescale -9 -12;
+    .scope S_0x5b566094c510;
+T_0 ;
+    %vpi_call/w 3 8 "$dumpfile", "not_gate.vcd" {0 0 0};
+    %vpi_call/w 3 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5b566094c510 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x5b566094c6a0;
+T_1 ;
+    %vpi_call/w 4 3 "$dumpfile", "results/not_gate/not_gate.fst" {0 0 0};
+    %vpi_call/w 4 4 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5b566094c510 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "verilog/not_gate.v";
+    "results/not_gate/cocotb_iverilog_dump.v";

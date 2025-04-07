@@ -1,0 +1,8 @@
+# Read the Verilog file
+read_verilog adder.v
+
+# Elaborate the top module
+synth -top adder
+
+# Output gate-level netlist in Verilog
+write_verilog adder_synth.v

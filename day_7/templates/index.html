@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logic Gates</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f4f7, #d9e2ec);
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .btn {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .btn button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #3498db;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+    .msg {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+
+    .msg pre {
+      padding: 10px;
+      background-color: #ecf0f1;
+      display: inline-block;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+
+    @media (max-width: 600px) {
+      .btn button {
+        width: 100%;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <h1>Logic Gates Simulator</h1>
+  <div class="container">
+    <div class="btn">
+      <button onclick="triggerGate('/and')">AND Gate</button>
+      <button onclick="triggerGate('/or')">OR Gate</button>
+      <button onclick="triggerGate('/not')">NOT Gate</button>
+
+    </div>
+  </div>
+  <div class="msg"><pre id="result">Select a
