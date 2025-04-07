@@ -1,0 +1,5 @@
+read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+hierarchy -check -top ram
+proc; opt; fsm; opt
+techmap; opt
+write_verilog -noattr /home/mirafra/PycharmProjects/RAMTest/ram/netlist.v

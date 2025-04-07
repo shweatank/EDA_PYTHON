@@ -1,0 +1,2745 @@
+[2025-04-05 20:24:34] Running RAM test...
+[2025-04-05 20:24:34] Test Output:
+
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 20:24:37] Synthesis Output:
+
+bash: run_synth.sh: No such file or directory
+
+[2025-04-05 20:24:43] Opened GTKWave.
+[2025-04-05 20:27:18] 🔁 Running RAM test...
+[2025-04-05 20:27:18] 🧪 Test Output:
+
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 20:27:20] 🔁 Running synthesis...
+[2025-04-05 20:27:23] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.34 MB total, 9.39 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 46% 2x read_verilog (0 sec), 24% 1x show (0 sec), ...
+
+
+[2025-04-05 20:27:26] 📈 Opening GTKWave...
+[2025-04-05 20:27:26] VCD file not found!
+[2025-04-05 20:30:28] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:30:30] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743865230
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      29050.35  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      24385.26  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:30:32] 🔁 Running synthesis...
+[2025-04-05 20:30:34] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.34 MB total, 9.67 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 24% 1x show (0 sec), ...
+
+
+[2025-04-05 20:30:36] 📈 Opening GTKWave...
+[2025-04-05 20:30:36] ✅ GTKWave opened.
+[2025-04-05 20:33:16] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:33:18] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743865398
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30864.53  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      26019.00  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:33:23] 🔁 Running synthesis...
+[2025-04-05 20:33:24] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.34 MB total, 9.38 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 42% 2x read_verilog (0 sec), 27% 1x show (0 sec), ...
+
+
+[2025-04-05 20:33:25] 📈 Opening GTKWave...
+[2025-04-05 20:33:25] ✅ GTKWave opened.
+[2025-04-05 20:39:50] 🔁 Running RAM test...
+[2025-04-05 20:39:51] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743865791
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30340.29  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      25469.65  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:40:16] 🔁 Running synthesis...
+[2025-04-05 20:40:22] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.65 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 25% 1x show (0 sec), ...
+
+
+[2025-04-05 20:40:24] 📈 Opening GTKWave...
+[2025-04-05 20:40:24] ✅ GTKWave opened.
+[2025-04-05 20:41:36] 🔁 Running RAM test...
+[2025-04-05 20:41:38] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743865898
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30473.83  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      25622.54  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:42:28] 🔁 Running RAM test...
+[2025-04-05 20:42:30] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743865950
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30647.25  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      25861.04  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:42:36] 🔁 Running RAM test...
+[2025-04-05 20:42:37] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743865957
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30812.65  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      25692.57  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:42:47] 🔁 Running synthesis...
+[2025-04-05 20:45:45] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:45:46] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743866146
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      31241.21  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      26376.13  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:46:09] 🔁 Running synthesis...
+[2025-04-05 20:46:09] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.30 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 25% 1x show (0 sec), ...
+
+
+[2025-04-05 20:46:36] 📈 Opening GTKWave...
+[2025-04-05 20:46:36] ✅ GTKWave opened.
+[2025-04-05 20:46:41] 🔁 Running synthesis...
+[2025-04-05 20:46:41] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.35 MB total, 9.42 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 44% 2x read_verilog (0 sec), 23% 1x show (0 sec), ...
+
+
+[2025-04-05 20:46:47] 🔁 Running synthesis...
+[2025-04-05 20:46:47] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.52 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 25% 1x show (0 sec), ...
+
+
+[2025-04-05 20:46:52] 🔁 Running synthesis...
+[2025-04-05 20:46:52] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.35 MB total, 9.39 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 45% 2x read_verilog (0 sec), 23% 1x show (0 sec), ...
+
+
+[2025-04-05 20:48:44] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:48:45] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743866325
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30583.22  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      25891.43  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:49:01] 🔁 Running synthesis...
+[2025-04-05 20:49:01] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.35 MB total, 9.57 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 25% 1x show (0 sec), ...
+
+
+[2025-04-05 20:49:16] 🔁 Running synthesis...
+[2025-04-05 20:49:16] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.01s, MEM: 15.35 MB total, 9.73 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 41% 2x read_verilog (0 sec), 29% 1x show (0 sec), ...
+
+
+[2025-04-05 20:49:19] 🔁 Running synthesis...
+[2025-04-05 20:49:19] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.65 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 39% 2x read_verilog (0 sec), 31% 1x show (0 sec), ...
+
+
+[2025-04-05 20:49:21] 🔁 Running synthesis...
+[2025-04-05 20:49:21] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.35 MB total, 9.39 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 37% 2x read_verilog (0 sec), 29% 1x show (0 sec), ...
+
+
+[2025-04-05 20:49:23] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:49:24] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743866364
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      27561.03  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      23202.82  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:49:30] 🔁 Running synthesis...
+[2025-04-05 20:49:30] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.01s, MEM: 15.35 MB total, 9.72 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 44% 2x read_verilog (0 sec), 25% 1x show (0 sec), ...
+
+
+[2025-04-05 20:49:32] 📈 Opening GTKWave...
+[2025-04-05 20:49:32] ✅ GTKWave opened.
+[2025-04-05 20:49:39] 🔁 Running synthesis...
+[2025-04-05 20:49:39] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.56 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 24% 1x show (0 sec), ...
+
+
+[2025-04-05 20:54:10] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:54:12] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743866652
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30606.82  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      25750.51  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:58:03] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:58:04] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743866884
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      31009.79  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      26001.31  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:58:08] 🔁 Running synthesis...
+[2025-04-05 20:58:08] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.35 MB total, 9.75 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 40% 2x read_verilog (0 sec), 30% 1x show (0 sec), ...
+
+
+[2025-04-05 20:58:12] 🔁 Running synthesis...
+[2025-04-05 20:58:12] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.42 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 25% 1x show (0 sec), ...
+
+
+[2025-04-05 20:58:14] 📈 Opening GTKWave...
+[2025-04-05 20:58:14] ✅ GTKWave opened.
+[2025-04-05 20:58:26] 🔁 Running synthesis...
+[2025-04-05 20:58:26] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.35 MB total, 9.64 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 44% 2x read_verilog (0 sec), 24% 1x show (0 sec), ...
+
+
+[2025-04-05 20:58:28] 🔁 Running RAM test with make -C ...
+[2025-04-05 20:58:30] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743866910
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30579.79  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      25853.99  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 20:58:32] 🔁 Running synthesis...
+[2025-04-05 20:58:32] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.50 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 42% 2x read_verilog (0 sec), 27% 1x show (0 sec), ...
+
+
+[2025-04-05 20:58:50] 🔁 Running synthesis...
+[2025-04-05 20:59:00] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.35 MB total, 9.42 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 43% 2x read_verilog (0 sec), 25% 1x show (0 sec), ...
+
+
+[2025-04-05 21:01:49] 🔁 Running RAM test with make -C ...
+[2025-04-05 21:01:51] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/RAMTest/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 10.3 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/RAMTest/.venv/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743867111
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      30923.61  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.02      26055.05  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-05 21:01:54] 🔁 Running synthesis...
+[2025-04-05 21:01:56] 📈 Opening GTKWave...
+[2025-04-05 21:01:56] ✅ GTKWave opened.
+[2025-04-05 21:03:55] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.00s system 0.01s, MEM: 15.34 MB total, 9.70 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 41% 2x read_verilog (0 sec), 27% 1x show (0 sec), ...
+
+
+[2025-04-07 10:20:16] 🔁 Running RAM test with make -C ...
+[2025-04-07 10:20:21] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/.local/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:79   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+Error: VVP input file 10.3 can not be run with run time version 11.0 (stable)
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+make[1]: *** [/home/mirafra/.local/lib/python3.10/site-packages/cocotb/share/makefiles/simulators/Makefile.icarus:95: results.xml] Error 1
+make: *** [/home/mirafra/.local/lib/python3.10/site-packages/cocotb/share/makefiles/Makefile.inc:40: sim] Error 2
+
+[2025-04-07 10:20:40] 🔁 Running synthesis...
+[2025-04-07 10:20:43] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.01s, MEM: 15.69 MB total, 9.12 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 35% 1x show (0 sec), 35% 2x read_verilog (0 sec), ...
+
+
+[2025-04-07 10:20:44] 📈 Opening GTKWave...
+[2025-04-07 10:20:44] ✅ GTKWave opened.
+[2025-04-07 10:23:00] 🔁 Running RAM test with make -C ...
+[2025-04-07 10:23:03] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/.local/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:79   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/.local/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1744001583
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      21091.21  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.05       9930.53  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-07 10:23:09] 🔁 Running synthesis...
+[2025-04-07 10:23:11] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.69 MB total, 9.62 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 37% 2x read_verilog (0 sec), 29% 1x show (0 sec), ...
+
+
+[2025-04-07 10:23:12] 📈 Opening GTKWave...
+[2025-04-07 10:23:12] ✅ GTKWave opened.
+[2025-04-07 10:27:03] 🔁 Running RAM test with make -C ...
+[2025-04-07 10:27:06] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/.local/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:79   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/.local/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1744001826
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.02      20805.52  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.05      10249.21  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-07 10:27:16] 🔁 Running synthesis...
+[2025-04-07 10:27:23] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.69 MB total, 9.50 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 44% 2x read_verilog (0 sec), 23% 1x show (0 sec), ...
+
+
+[2025-04-07 10:27:24] 📈 Opening GTKWave...
+[2025-04-07 10:27:24] ✅ GTKWave opened.
+[2025-04-07 11:37:38] 🔁 Running RAM test with make -C ...
+[2025-04-07 11:37:42] 🧪 Test Output:
+make: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+rm -f results.xml
+MODULE=test_ram TESTCASE= TOPLEVEL=ram TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/.local/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:79   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/.local/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1744006062
+     0.00ns INFO     cocotb.regression                  Found test test_ram.test_ram
+     0.00ns INFO     cocotb.regression                  running test_ram (1/1)
+                                                          Try writing values into the RAM and reading back
+     0.00ns INFO     cocotb.ram                         Found 32 entry RAM by 16 bits wide
+     0.00ns INFO     cocotb.ram                         Writing in random values
+   201.60ns INFO     cocotb.ram                         Reading back values and checking
+   520.00ns INFO     cocotb.ram                         RAM contents OK
+   520.00ns INFO     cocotb.regression                  test_ram passed
+   520.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ram.test_ram              PASS         520.00           0.03      20381.29  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                520.00           0.05      10074.75  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile waveform.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (waveform.vcd).
+FST warning: ignoring signals in previously scanned scope ram.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+make: Leaving directory '/home/mirafra/PycharmProjects/RAMTest/ram'
+
+
+[2025-04-07 11:37:44] 🔁 Running synthesis...
+[2025-04-07 11:37:53] 🔧 Synthesis Output:
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog /home/mirafra/PycharmProjects/RAMTest/ram/design.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: /home/mirafra/PycharmProjects/RAMTest/ram/design.v
+Parsing Verilog input from `/home/mirafra/PycharmProjects/RAMTest/ram/design.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:42: Warning: Ignoring call to system task $dumpfile.
+/home/mirafra/PycharmProjects/RAMTest/ram/design.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:41$9'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+     1/1: $0\data_read[15:0]
+Creating decoders for process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+     1/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN[15:0]$5
+     2/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA[15:0]$4
+     3/3: $0$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR[4:0]$3
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ram.\data_read' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+  created $dff cell `$procdff$16' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_ADDR' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$17' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_DATA' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$18' with positive edge clock.
+Creating register for signal `\ram.$memwr$\memory$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:31$1_EN' using process `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+  created $dff cell `$procdff$19' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:36$6'.
+Found and cleaned up 1 empty switch in `\ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Removing empty process `ram.$proc$/home/mirafra/PycharmProjects/RAMTest/ram/design.v:29$2'.
+Cleaned up 1 empty switch.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module ram to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 001466ca71
+CPU: user 0.01s system 0.00s, MEM: 15.69 MB total, 9.62 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 39% 2x read_verilog (0 sec), 27% 1x show (0 sec), ...
+
+
+[2025-04-07 11:37:54] 📈 Opening GTKWave...
+[2025-04-07 11:37:54] ✅ GTKWave opened.
+[2025-04-07 11:38:14] 📈 Opening GTKWave...
+[2025-04-07 11:38:14] ✅ GTKWave opened.
