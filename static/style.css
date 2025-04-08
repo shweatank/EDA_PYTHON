@@ -1,0 +1,68 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+select, button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+pre {
+    background: #000;
+    color: #0f0;
+    padding: 10px;
+    overflow-x: auto;
+    height: 200px;
+    border-radius: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.passed {
+    color: green;
+    font-weight: bold;
+}
+
+.failed {
+    color: red;
+    font-weight: bold;
+}
+#logOutput {
+    background: #f3f3f3;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    height: 600px; /* Adjust this as needed */
+    overflow-y: auto;
+    border-radius: 6px;
+    font-family: monospace;
+}
+

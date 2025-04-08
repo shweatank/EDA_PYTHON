@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDA Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>EDA Simulation Dashboard</h1>
+
+    <label>Select file:</label>
+    <select id="gateSelect">
+        {% for gate in gates %}
+            <option value="{{ gate }}">{{ gate }}</option>
+        {% endfor %}
+    </select>
+
+    <button onclick="runTest()">▶ Run Test</button>
+    <button onclick="runSynthesis()">🔧 Run Synthesis</button>
+    <button onclick="loadTruthTable()">📊 Load Truth Table</button>
+    <button onclick="runWaveform()">📈 View Waveform</button>
+    <button onclick="listFiles()">📂 Show Files</button>
+
+    <h3>Test Result: <span id="status"></span></h3>
+    <pre id="output"></pre>
+
+    <h3>Truth Table</h3>
+    <table id="truthTable"></table>
+
+    <h3>📜 Logs</h3>
+    <pre id="logOutput" style="background:#f3f3f3; color: black; padding:10px; border:1px solid #ccc; max-height:600px; overflow-y:auto;"></pre>
+
+    <h3>📁 Gate Files</h3>
+    <ul id="fileList"></ul>
+
+    <h3>📂 File Viewer</h3>
+    <div id="fileContent" style="background:#fdfdfd; color: black; padding:10px; border:1px solid #ccc; max-height:400px; overflow-y:auto;"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

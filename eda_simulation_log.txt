@@ -1,0 +1,862 @@
+[2025-04-05 01:18:25] Running test for gate: nand_gate
+[2025-04-05 01:18:27] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743796107
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      68845.45  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8951.41  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 01:18:27] Test Status: Passed
+[2025-04-05 01:18:33] Synthesis started for nand_gate using Yosys
+[2025-04-05 01:18:40] Truth table for nand_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '1'], ['0', '1', '1'], ['1', '0', '1'], ['1', '1', '0']]
+[2025-04-05 01:18:48] GTKWave opened for nand_gate
+[2025-04-05 01:23:33] Running test for gate: nand_gate
+[2025-04-05 01:23:35] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743796415
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      69935.95  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8976.32  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 01:23:35] Test Status: Passed
+[2025-04-05 01:23:37] Synthesis started for nand_gate using Yosys
+[2025-04-05 01:23:43] Truth table for nand_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '1'], ['0', '1', '1'], ['1', '0', '1'], ['1', '1', '0']]
+[2025-04-05 01:23:45] GTKWave opened for nand_gate
+[2025-04-05 01:25:15] Running test for gate: logs
+[2025-04-05 01:25:15] Test Failed for logs. Error:
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 01:25:33] Running test for gate: __pycache__
+[2025-04-05 01:25:33] Test Failed for __pycache__. Error:
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 01:25:37] Running test for gate: or_gate
+[2025-04-05 01:25:39] Test Output for or_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/or_gate'
+rm -f results.xml
+MODULE=test_or   TESTCASE= TOPLEVEL=or_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743796539
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_or.test_or_gate
+     0.00ns INFO     cocotb.regression                  running test_or_gate (1/1)
+                                                          Test OR gate functionality
+     4.00ns INFO     cocotb.regression                  test_or_gate passed
+     4.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_or.test_or_gate           PASS           4.00           0.00       4246.31  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  4.00           0.00        826.39  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile sim_build/or_gate.fst opened for output.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/or_gate'
+
+[2025-04-05 01:25:39] Test Status: Passed
+[2025-04-05 01:31:38] Running test for gate: nand_gate
+[2025-04-05 01:31:40] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743796900
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      69443.86  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8841.50  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 01:31:40] Test Status: Passed
+[2025-04-05 14:47:47] Running test for gate: nand_gate
+[2025-04-05 14:47:49] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743844669
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      50795.14  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8086.39  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 14:47:49] Test Status: Passed
+[2025-04-05 14:47:51] Synthesis started for nand_gate using Yosys
+[2025-04-05 14:47:57] Truth table for nand_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '1'], ['0', '1', '1'], ['1', '0', '1'], ['1', '1', '0']]
+[2025-04-05 14:47:59] GTKWave opened for nand_gate
+[2025-04-05 14:58:32] Running test for gate: nand_gate
+[2025-04-05 14:58:33] Running test for gate: nand_gate
+[2025-04-05 14:58:34] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743845314
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      68035.83  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8295.49  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 14:58:34] Test Status: Passed
+[2025-04-05 14:58:36] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743845316
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      67271.99  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8949.50  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 14:58:36] Test Status: Passed
+[2025-04-05 14:58:36] Synthesis started for nand_gate using Yosys
+[2025-04-05 14:58:53] Running test for gate: logs
+[2025-04-05 14:58:53] Test Failed for logs. Error:
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 14:59:00] Running test for gate: templates
+[2025-04-05 14:59:00] Test Failed for templates. Error:
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 14:59:01] Running test for gate: templates
+[2025-04-05 14:59:01] Test Failed for templates. Error:
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 14:59:05] Running test for gate: __pycache__
+[2025-04-05 14:59:05] Test Failed for __pycache__. Error:
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 14:59:09] Running test for gate: nand_gate
+[2025-04-05 14:59:09] Running test for gate: nand_gate
+[2025-04-05 14:59:11] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743845351
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      68285.04  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.01       7316.89  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 14:59:11] Test Status: Passed
+[2025-04-05 14:59:11] Running test for gate: nand_gate
+[2025-04-05 14:59:11] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+make[1]: 'results.xml' is up to date.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 14:59:11] Test Status: Failed
+[2025-04-05 14:59:13] Running test for gate: nand_gate
+[2025-04-05 14:59:13] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743845353
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      36696.49  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.01       6331.42  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 14:59:13] Test Status: Passed
+[2025-04-05 14:59:14] Synthesis started for nand_gate using Yosys
+[2025-04-05 14:59:15] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743845355
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      68285.04  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8652.28  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 14:59:15] Test Status: Passed
+[2025-04-05 14:59:17] Truth table for nand_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '1'], ['0', '1', '1'], ['1', '0', '1'], ['1', '1', '0']]
+[2025-04-05 14:59:25] GTKWave opened for nand_gate
+[2025-04-05 15:06:11] Running test for gate: xnor_main
+[2025-04-05 15:06:13] Test Failed for xnor_main. Error:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/xnor_main'
+rm -f results.xml
+MODULE=test_xnor TESTCASE= TOPLEVEL=xnor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+Error: VVP input file 10.3 can not be run with run time version 11.0 (stable)
+make[1]: *** [/home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/share/makefiles/simulators/Makefile.icarus:95: results.xml] Error 1
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/xnor_main'
+make: *** [/home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/share/makefiles/Makefile.inc:40: sim] Error 2
+
+[2025-04-05 15:06:24] Synthesis started for xnor_main using Yosys
+[2025-04-05 15:06:30] Truth table for xnor_main loaded:
+[['A', 'B', 'XNOR'], ['0', '0', '1'], ['0', '1', '0'], ['1', '0', '0'], ['1', '1', '1']]
+[2025-04-05 15:06:32] Waveform view failed: VCD file not found for xnor_main
+[2025-04-05 15:11:18] Running test for gate: xnor_main
+[2025-04-05 15:11:20] Test Failed for xnor_main. Error:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/xnor_main'
+rm -f results.xml
+MODULE=test_xnor TESTCASE= TOPLEVEL=xnor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+Error: VVP input file 10.3 can not be run with run time version 11.0 (stable)
+make[1]: *** [/home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/share/makefiles/simulators/Makefile.icarus:95: results.xml] Error 1
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/xnor_main'
+make: *** [/home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/share/makefiles/Makefile.inc:40: sim] Error 2
+
+[2025-04-05 15:15:00] Running test for gate: nor_main
+[2025-04-05 15:15:02] Test Failed for nor_main. Error:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nor_main'
+rm -f results.xml
+MODULE=test_nor TESTCASE= TOPLEVEL=nor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+Error: VVP input file 10.3 can not be run with run time version 11.0 (stable)
+make[1]: *** [/home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/share/makefiles/simulators/Makefile.icarus:95: results.xml] Error 1
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nor_main'
+make: *** [/home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/share/makefiles/Makefile.inc:40: sim] Error 2
+
+[2025-04-05 15:15:05] Synthesis started for nor_main using Yosys
+[2025-04-05 15:15:08] Truth table for nor_main loaded:
+[['A', 'B', 'NOR'], ['0', '0', '1'], ['0', '1', '0'], ['1', '0', '0'], ['1', '1', '0']]
+[2025-04-05 15:15:10] Waveform view failed: VCD file not found for nor_main
+[2025-04-05 15:26:18] Running test for gate: nor_main
+[2025-04-05 15:26:20] Test Output for nor_main:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nor_main'
+rm -f results.xml
+MODULE=test_nor TESTCASE= TOPLEVEL=nor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743846980
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nor.test_nor_gate
+     0.00ns INFO     cocotb.regression                  running test_nor_gate (1/1)
+                                                          Test NOR Gate and generate VCD file
+✅ NOR Gate Test Passed!
+    20.00ns INFO     cocotb.regression                  test_nor_gate passed
+    20.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nor.test_nor_gate         PASS          20.00           0.00      35366.89  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 20.00           0.00       4032.80  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nor_main'
+
+[2025-04-05 15:26:20] Test Status: Passed
+[2025-04-05 15:26:23] Synthesis started for nor_main using Yosys
+[2025-04-05 15:26:34] Truth table for nor_main loaded:
+[['A', 'B', 'NOR'], ['0', '0', '1'], ['0', '1', '0'], ['1', '0', '0'], ['1', '1', '0']]
+[2025-04-05 15:26:35] Waveform view failed: VCD file not found for nor_main
+[2025-04-05 15:26:39] Waveform view failed: VCD file not found for nor_main
+[2025-04-05 15:28:57] Running test for gate: xor_main
+[2025-04-05 15:28:59] Test Output for xor_main:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/xor_main'
+rm -f results.xml
+MODULE=test_xor TESTCASE= TOPLEVEL=xor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743847139
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_xor.test_xor_gate
+     0.00ns INFO     cocotb.regression                  running test_xor_gate (1/1)
+                                                          Test XOR Gate and generate VCD file
+✅ XOR Gate Test Passed!
+    20.00ns INFO     cocotb.regression                  test_xor_gate passed
+    20.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_xor.test_xor_gate         PASS          20.00           0.00      35248.01  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 20.00           0.00       4018.50  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/xor_main'
+
+[2025-04-05 15:28:59] Test Status: Passed
+[2025-04-05 15:29:01] Waveform view failed: VCD file not found for xor_main
+[2025-04-05 15:29:10] GTKWave opened for nand_gate
+[2025-04-05 16:23:14] Running test for gate: nor_gate
+[2025-04-05 16:23:15] Test Output for nor_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nor_gate'
+rm -f results.xml
+MODULE=test_nor   TESTCASE= TOPLEVEL=nor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743850395
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nor.test_nor_gate
+     0.00ns INFO     cocotb.regression                  running test_nor_gate (1/1)
+                                                          Test OR gate functionality
+     4.00ns INFO     cocotb.regression                  test_nor_gate passed
+     4.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nor.test_nor_gate         PASS           4.00           0.00       4121.17  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  4.00           0.01        715.75  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile sim_build/nor_gate.fst opened for output.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nor_gate'
+
+[2025-04-05 16:23:15] Test Status: Passed
+[2025-04-05 16:23:20] Synthesis started for nor_gate using Yosys
+[2025-04-05 16:23:25] Truth table for nor_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '1'], ['0', '1', '0'], ['1', '0', '0'], ['1', '1', '0'], []]
+[2025-04-05 16:23:26] Waveform view failed: VCD file not found for nor_gate
+[2025-04-05 16:27:55] GTKWave opened for nor_gate
+[2025-04-05 16:28:50] Waveform view failed: VCD file not found for xor_main
+[2025-04-05 16:29:02] Waveform view failed: VCD file not found for xnor_main
+[2025-04-05 16:29:49] Waveform view failed: VCD file not found for xor_gate
+[2025-04-05 16:29:54] GTKWave opened for xnor_gate
+[2025-04-05 16:30:43] GTKWave opened for xor_gate
+[2025-04-05 16:30:52] Truth table for xor_gate loaded:
+[['A', 'B', 'XOR'], ['0', '0', '0'], ['0', '1', '1'], ['1', '0', '1'], ['1', '1', '0']]
+[2025-04-05 16:34:00] Running test for gate: nand_gate
+[2025-04-05 16:34:02] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743851042
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      70612.94  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       8845.23  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 16:34:02] Test Status: Passed
+[2025-04-05 16:38:51] Running test for gate: nand_gate
+[2025-04-05 16:38:53] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743851333
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      70405.52  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       9185.17  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 16:38:53] Test Status: Passed
+[2025-04-05 16:50:21] Running test for gate: nand_gate
+[2025-04-05 16:50:23] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743852023
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      68648.26  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       9064.09  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 16:50:23] Test Status: Passed
+[2025-04-05 16:53:39] Running test for gate: nand_gate
+[2025-04-05 16:53:40] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743852220
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      69559.02  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       9058.22  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 16:53:40] Test Status: Passed
+[2025-04-05 16:53:42] Synthesis started for nand_gate using Yosys
+[2025-04-05 16:53:46] Truth table for nand_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '1'], ['0', '1', '1'], ['1', '0', '1'], ['1', '1', '0']]
+[2025-04-05 16:53:48] GTKWave opened for nand_gate
+[2025-04-05 17:04:39] Running test for gate: nand_gate
+[2025-04-05 17:04:41] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743852881
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      68091.05  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       9115.31  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 17:04:41] Test Status: Passed
+[2025-04-05 17:07:33] Running test for gate: or_gate
+[2025-04-05 17:07:35] Test Output for or_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/or_gate'
+rm -f results.xml
+MODULE=test_or   TESTCASE= TOPLEVEL=or_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743853055
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_or.test_or_gate
+     0.00ns INFO     cocotb.regression                  running test_or_gate (1/1)
+                                                          Test OR gate functionality
+     4.00ns INFO     cocotb.regression                  test_or_gate passed
+     4.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_or.test_or_gate           PASS           4.00           0.00       4329.57  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  4.00           0.00        833.36  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile sim_build/or_gate.fst opened for output.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/or_gate'
+
+[2025-04-05 17:07:35] Test Status: Passed
+[2025-04-05 17:07:46] Synthesis started for or_gate using Yosys
+[2025-04-05 17:07:50] Truth table for or_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '0'], ['0', '1', '1'], ['1', '0', '1'], ['1', '1', '1'], []]
+[2025-04-05 17:07:52] GTKWave opened for or_gate
+[2025-04-05 17:10:04] Running test for gate: and_gate
+[2025-04-05 17:10:05] Synthesis started for and_gate using Yosys
+[2025-04-05 17:10:06] Test Output for and_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/and_gate'
+rm -f results.xml
+MODULE=test_and_gate TESTCASE= TOPLEVEL=and_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743853206
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_and_gate.test_and_gate
+     0.00ns INFO     cocotb.regression                  running test_and_gate (1/1)
+                                                          Test for AND gate
+     4.00ns INFO     cocotb.regression                  test_and_gate passed
+     4.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_and_gate.test_and_gate    PASS           4.00           0.00       3804.45  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  4.00           0.01        791.24  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile sim_build/and_gate.fst opened for output.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/and_gate'
+
+[2025-04-05 17:10:06] Test Status: Passed
+[2025-04-05 17:11:04] Running test for gate: xnor_gate
+[2025-04-05 17:11:06] Test Output for xnor_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/xnor_gate'
+rm -f results.xml
+MODULE=test_xnor TESTCASE= TOPLEVEL=xnor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743853266
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_xnor.test_xnor_gate
+     0.00ns INFO     cocotb.regression                  running test_xnor_gate (1/1)
+                                                          Test OR Gate and generate VCD file
+✅ XNOR Gate Test Passed!
+    20.00ns INFO     cocotb.regression                  test_xnor_gate passed
+    20.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_xnor.test_xnor_gate       PASS          20.00           0.00      32680.28  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 20.00           0.01       3612.85  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/xnor_gate'
+
+[2025-04-05 17:11:06] Test Status: Passed
+[2025-04-05 17:11:23] Running test for gate: not_gate
+[2025-04-05 17:11:25] Test Output for not_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/not_gate'
+rm -f results.xml
+MODULE=test_not_gate        TESTCASE= TOPLEVEL=not_gate           TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743853285
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_not_gate.test_not_gate
+     0.00ns INFO     cocotb.regression                  running test_not_gate (1/1)
+                                                          Test NOT gate behavior
+     2.00ns INFO     cocotb.regression                  test_not_gate passed
+     2.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_not_gate.test_not_gate    PASS           2.00           0.00       4561.31  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  2.00           0.00        460.97  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/not_gate'
+
+[2025-04-05 17:11:25] Test Status: Passed
+[2025-04-05 17:11:45] Running test for gate: and_gate
+[2025-04-05 17:11:47] Test Output for and_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/and_gate'
+rm -f results.xml
+MODULE=test_and_gate TESTCASE= TOPLEVEL=and_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743853307
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_and_gate.test_and_gate
+     0.00ns INFO     cocotb.regression                  running test_and_gate (1/1)
+                                                          Test for AND gate
+     4.00ns INFO     cocotb.regression                  test_and_gate passed
+     4.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_and_gate.test_and_gate    PASS           4.00           0.00       4206.92  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  4.00           0.00        825.29  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile sim_build/and_gate.fst opened for output.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/and_gate'
+
+[2025-04-05 17:11:47] Test Status: Passed
+[2025-04-05 17:11:47] Synthesis started for and_gate using Yosys
+[2025-04-05 17:11:52] Truth table for and_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '0'], ['0', '1', '0'], ['1', '0', '0'], ['1', '1', '1']]
+[2025-04-05 17:11:54] GTKWave opened for and_gate
+[2025-04-05 17:15:14] Running test for gate: logs
+[2025-04-05 17:15:14] Test Failed for logs. Error:
+make: *** No targets specified and no makefile found.  Stop.
+
+[2025-04-05 17:15:24] Running test for gate: nand_gate
+[2025-04-05 17:15:26] Test Output for nand_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+rm -f results.xml
+MODULE=test_nand TESTCASE= TOPLEVEL=nand_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp  
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743853526
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nand.test_nand_gate
+     0.00ns INFO     cocotb.regression                  running test_nand_gate (1/1)
+    40.00ns INFO     cocotb.regression                  test_nand_gate passed
+    40.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nand.test_nand_gate       PASS          40.00           0.00      67679.05  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 40.00           0.00       9095.54  **
+                                                        **************************************************************************************
+                                                        
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nand_gate'
+
+[2025-04-05 17:15:26] Test Status: Passed
+[2025-04-07 10:37:29] Running test for gate: nor_gate
+[2025-04-07 10:37:31] Test Output for nor_gate:
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/Eda_project/nor_gate'
+rm -f results.xml
+MODULE=test_nor   TESTCASE= TOPLEVEL=nor_gate TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/Eda_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/Eda_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1744002451
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_nor.test_nor_gate
+     0.00ns INFO     cocotb.regression                  running test_nor_gate (1/1)
+                                                          Test OR gate functionality
+     4.00ns INFO     cocotb.regression                  test_nor_gate passed
+     4.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_nor.test_nor_gate         PASS           4.00           0.00       4297.42  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  4.00           0.01        776.88  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile sim_build/nor_gate.fst opened for output.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/Eda_project/nor_gate'
+
+[2025-04-07 10:37:31] Test Status: Passed
+[2025-04-07 10:37:34] Synthesis started for nor_gate using Yosys
+[2025-04-07 10:37:37] Truth table for nor_gate loaded:
+[['A', 'B', 'OUT'], ['0', '0', '1'], ['0', '1', '0'], ['1', '0', '0'], ['1', '1', '0'], []]
+[2025-04-07 10:37:39] GTKWave opened for nor_gate
