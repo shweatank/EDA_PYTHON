@@ -1,0 +1,65 @@
+cycle,clk_write,write_enable,address_write,data_write,clk_read,address_read,data_read,note
+0,↑,1,0,27662,-,-,-,Write 27662 to addr 0
+1,↑,1,1,63038,-,-,-,Write 63038 to addr 1
+2,↑,1,2,1530,-,-,-,Write 1530 to addr 2
+3,↑,1,3,29538,-,-,-,Write 29538 to addr 3
+4,↑,1,4,19023,-,-,-,Write 19023 to addr 4
+5,↑,1,5,10567,-,-,-,Write 10567 to addr 5
+6,↑,1,6,49548,-,-,-,Write 49548 to addr 6
+7,↑,1,7,854,-,-,-,Write 854 to addr 7
+8,↑,1,8,59224,-,-,-,Write 59224 to addr 8
+9,↑,1,9,49589,-,-,-,Write 49589 to addr 9
+10,↑,1,10,19237,-,-,-,Write 19237 to addr 10
+11,↑,1,11,24385,-,-,-,Write 24385 to addr 11
+12,↑,1,12,38966,-,-,-,Write 38966 to addr 12
+13,↑,1,13,25496,-,-,-,Write 25496 to addr 13
+14,↑,1,14,22520,-,-,-,Write 22520 to addr 14
+15,↑,1,15,56177,-,-,-,Write 56177 to addr 15
+16,↑,1,16,4726,-,-,-,Write 4726 to addr 16
+17,↑,1,17,22055,-,-,-,Write 22055 to addr 17
+18,↑,1,18,160,-,-,-,Write 160 to addr 18
+19,↑,1,19,32754,-,-,-,Write 32754 to addr 19
+20,↑,1,20,4363,-,-,-,Write 4363 to addr 20
+21,↑,1,21,25688,-,-,-,Write 25688 to addr 21
+22,↑,1,22,13712,-,-,-,Write 13712 to addr 22
+23,↑,1,23,38652,-,-,-,Write 38652 to addr 23
+24,↑,1,24,40376,-,-,-,Write 40376 to addr 24
+25,↑,1,25,13042,-,-,-,Write 13042 to addr 25
+26,↑,1,26,52542,-,-,-,Write 52542 to addr 26
+27,↑,1,27,2840,-,-,-,Write 2840 to addr 27
+28,↑,1,28,16297,-,-,-,Write 16297 to addr 28
+29,↑,1,29,35427,-,-,-,Write 35427 to addr 29
+30,↑,1,30,20825,-,-,-,Write 20825 to addr 30
+31,↑,1,31,38467,-,-,-,Write 38467 to addr 31
+32,-,0,-,-,↑,0,27662,Read from addr 0
+33,-,0,-,-,↑,1,63038,Read from addr 1
+34,-,0,-,-,↑,2,1530,Read from addr 2
+35,-,0,-,-,↑,3,29538,Read from addr 3
+36,-,0,-,-,↑,4,19023,Read from addr 4
+37,-,0,-,-,↑,5,10567,Read from addr 5
+38,-,0,-,-,↑,6,49548,Read from addr 6
+39,-,0,-,-,↑,7,854,Read from addr 7
+40,-,0,-,-,↑,8,59224,Read from addr 8
+41,-,0,-,-,↑,9,49589,Read from addr 9
+42,-,0,-,-,↑,10,19237,Read from addr 10
+43,-,0,-,-,↑,11,24385,Read from addr 11
+44,-,0,-,-,↑,12,38966,Read from addr 12
+45,-,0,-,-,↑,13,25496,Read from addr 13
+46,-,0,-,-,↑,14,22520,Read from addr 14
+47,-,0,-,-,↑,15,56177,Read from addr 15
+48,-,0,-,-,↑,16,4726,Read from addr 16
+49,-,0,-,-,↑,17,22055,Read from addr 17
+50,-,0,-,-,↑,18,160,Read from addr 18
+51,-,0,-,-,↑,19,32754,Read from addr 19
+52,-,0,-,-,↑,20,4363,Read from addr 20
+53,-,0,-,-,↑,21,25688,Read from addr 21
+54,-,0,-,-,↑,22,13712,Read from addr 22
+55,-,0,-,-,↑,23,38652,Read from addr 23
+56,-,0,-,-,↑,24,40376,Read from addr 24
+57,-,0,-,-,↑,25,13042,Read from addr 25
+58,-,0,-,-,↑,26,52542,Read from addr 26
+59,-,0,-,-,↑,27,2840,Read from addr 27
+60,-,0,-,-,↑,28,16297,Read from addr 28
+61,-,0,-,-,↑,29,35427,Read from addr 29
+62,-,0,-,-,↑,30,20825,Read from addr 30
+63,-,0,-,-,↑,31,38467,Read from addr 31

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAM Simulation Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: white;
+      padding: 30px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff15;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      color: #00ffcc;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .controls {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    button {
+      background-color: #00ffaa;
+      border: none;
+      padding: 12px 24px;
+      margin: 8px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1em;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #00cc88;
+      transform: scale(1.05);
+    }
+    .status {
+      text-align: center;
+      font-size: 1.5em;
+      margin: 15px 0;
+    }
+    .log-section {
+      background-color: #000000bb;
+      padding: 20px;
+      border-radius: 12px;
+      overflow: auto;
+      max-height: 300px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 1em;
+      border-left: 5px solid #00ffaa;
+    }
+    .loader {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      border-top-color: #00ffaa;
+      animation: spin 1s infinite linear;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .tabs {
+      margin-top: 40px;
+    }
+    .tab {
+      background: #2e2e2e;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 15px 0;
+      border: 1px solid #00ffaa;
+    }
+    .tab h3 {
+      color: #00ffaa;
+      margin-bottom: 10px;
+    }
+    .tab.green h3 {
+      color: #00ff55;
+    }
+    .tab.purple h3 {
+      color: #c47aff;
+    }
+    .tick {
+      color: #00ff55;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💻 RAM Simulation Portal</h1>
+
+    <div class="controls">
+      <button onclick="runTest()">▶ Test Verification</button>
+      <button onclick="runSynthesis()">🛠 Synthesis</button>
+      <button onclick="runWaveform()">📈 Gtkwave Waveform</button>
+    </div>
+
+    <div class="status">
+      <strong>Status:</strong> <span id="status">⏳ Awaiting action...</span>
+    </div>
+
+    <div class="tabs">
+      <div class="tab">
+        <h3>🧪 Test Output <span class="tick" id="testTick"></span></h3>
+        <div class="log-section" id="testOutput">Test results will show here...</div>
+      </div>
+      <div class="tab green">
+        <h3>🔧 Synthesis Output <span class="tick" id="synthTick"></span></h3>
+        <div class="log-section" id="synthOutput">Synthesis results will show here...</div>
+      </div>
+      <div class="tab purple">
+        <h3>🪵 Logs</h3>
+        <div class="log-section" id="logOutput">Activity logs will be shown here...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setStatus(message, isLoader = true) {
+      const loader = isLoader ? '<span class="loader"></span> ' : '';
+      document.getElementById("status").innerHTML = loader + message;
+    }
+
+    function runTest() {
+      setStatus("Running test...");
+      fetch("/run_test", { method: "POST" })
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("testOutput").textContent = data.output || data.error || "No output received.";
+          document.getElementById("status").textContent = data.status;
+          if (!data.error) document.getElementById("testTick").textContent = '✔';
+          loadLogs();
+        });
+    }
+
+    function runSynthesis() {
+      setStatus("Synthesizing...");
+      fetch("/run_synthesis", { method: "POST" })
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("synthOutput").textContent = data.output || data.error || "No output received.";
+          document.getElementById("status").textContent = data.status;
+          if (!data.error) document.getElementById("synthTick").textContent = '✔';
+          loadLogs();
+        });
+    }
+
+    function runWaveform() {
+      setStatus("Opening GTKWave...");
+      fetch("/run_waveform", { method: "POST" })
+        .then(res => res.json())
+        .then(data => {
+          alert(data.message || data.error);
+          document.getElementById("status").textContent = data.status;
+          loadLogs();
+        });
+    }
+
+    function loadLogs() {
+      fetch("/get_logs")
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("logOutput").textContent = data.logs || "No logs available.";
+        });
+    }
+
+    window.onload = loadLogs;
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744005791" />
+    <testcase name="test_ram" classname="test_ram" file="/home/mirafra/PycharmProjects/RAMTest/ram/test_ram.py" lineno="32" time="0.024961471557617188" sim_time_ns="520.001" ratio_time="20832.14520424849" />
+  </testsuite>
+</testsuites>

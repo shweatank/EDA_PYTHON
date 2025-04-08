@@ -1,0 +1,78 @@
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #34495e;
+}
+
+/* Button Group Styling */
+.button-group {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button-group button {
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #388e3c; /* Darker green */
+    transform: scale(1.05);
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #2c3e50; /* Dark gray text */
+}
+
+/* Preformatted Text Styling */
+pre {
+    background-color: #34495e; /* Dark gray background */
+    color: #1abc9c; /* Teal text */
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Animations for Buttons and Cards */
+.card:hover {
+   box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+   transform: scale(1.02);
+}
