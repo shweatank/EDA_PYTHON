@@ -1,0 +1,5 @@
+
+            read_verilog verilog/or_gate.v
+            proc
+            show -format svg -prefix static/diagram_or_gate
+            

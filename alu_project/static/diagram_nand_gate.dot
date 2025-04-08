@@ -1,0 +1,16 @@
+digraph "nand_gate" {
+label="nand_gate";
+rankdir="LR";
+remincross=true;
+n3 [ shape=octagon, label="Y", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="B", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="A", color="black", fontcolor="black" ];
+c6 [ shape=record, label="{{<p5> A}|$2\n$not|{<p3> Y}}" ];
+c7 [ shape=record, label="{{<p5> A|<p4> B}|$1\n$and|{<p3> Y}}" ];
+x0 [shape=box, style=rounded, label="BUF"];
+c6:p3:e -> x0:w:w [color="black", label=""];
+c7:p3:e -> c6:p5:w [color="black", label=""];
+x0:e:e -> n3:w [color="black", label=""];
+n4:e -> c7:p4:w [color="black", label=""];
+n5:e -> c7:p5:w [color="black", label=""];
+}

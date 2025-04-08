@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ operation }} - Actions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: #0d0d0d;
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            height: 100vh;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #111;
+            padding: 30px 20px;
+            box-shadow: 2px 0 15px #0ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px 18px;
+            font-size: 14px;
+            border: 2px solid #0ff;
+            border-radius: 8px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #0ff;
+            color: #000;
+            transform: scale(1.03);
+        }
+
+        .back-btn {
+            padding: 10px 16px;
+            font-size: 13px;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        .main {
+            width: 75%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .output-block {
+            flex: 1;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px #0ff;
+            overflow-y: auto;
+        }
+
+        .output-block h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #0ff;
+            border-bottom: 1px solid #0ff;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>🛠️ {{ operation }} Ops</h1>
+        <form method="POST" action="/run_action" style="width: 100%;">
+            <input type="hidden" name="operation" value="{{ operation }}">
+            <button type="submit" name="task" value="test" class="btn">Run Test</button>
+            <button type="submit" name="task" value="gtkwave" class="btn">View GTKWave</button>
+            <button type="submit" name="task" value="synthesis" class="btn">RTL Synthesis</button>
+            <button type="submit" name="task" value="netlist" class="btn">Netlist Validation</button>
+            <button type="submit" name="task" value="diagram" class="btn">Diagram</button>
+        </form>
+        <div class="spacer"></div>
+        <a href="/" class="btn back-btn">⬅️ Back</a>
+    </div>
+
+    <div class="main">
+        <div class="output-block">
+            <h2>🧾 Output</h2>
+            <p>{{ result | safe if result else 'Click a button to see output.' }}</p>
+        </div>
+    </div>
+</body>
+</html>

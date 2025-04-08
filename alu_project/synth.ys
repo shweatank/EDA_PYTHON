@@ -1,0 +1,5 @@
+read_verilog verilog/or_gate.v
+hierarchy -check -top or_gate
+proc; opt; fsm; opt
+techmap; opt
+write_verilog -noattr verilog/netlist_or_gate.v
