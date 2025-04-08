@@ -1,0 +1,3 @@
+read_verilog /home/mirafra/PycharmProjects/Eda_project/and_gate/and_gate.v
+synth -top and_gate
+write_verilog /home/mirafra/PycharmProjects/Eda_project/and_gate/and_netlist.v

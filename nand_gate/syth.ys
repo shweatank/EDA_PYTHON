@@ -1,0 +1,3 @@
+read_verilog nand_gate.v
+synth -top nand_gate
+write_verilog nand_netlist.v

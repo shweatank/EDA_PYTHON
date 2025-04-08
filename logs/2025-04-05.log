@@ -1,0 +1,14 @@
+2025-04-05 00:54:29,504 - Test for nand_gate: Passed
+2025-04-05 00:54:29,504 - 127.0.0.1 - - [05/Apr/2025 00:54:29] "POST /run_test HTTP/1.1" 200 -
+2025-04-05 00:54:31,737 - Synthesis started for nand_gate.
+2025-04-05 00:54:31,738 - 127.0.0.1 - - [05/Apr/2025 00:54:31] "POST /run_synthesis HTTP/1.1" 200 -
+2025-04-05 00:54:34,842 - 127.0.0.1 - - [05/Apr/2025 00:54:34] "POST /get_truth_table HTTP/1.1" 200 -
+2025-04-05 00:54:36,662 - Waveform view launched for nand_gate.
+2025-04-05 00:54:36,663 - 127.0.0.1 - - [05/Apr/2025 00:54:36] "POST /run_waveform HTTP/1.1" 200 -
+2025-04-05 00:58:35,422 - Test for nand_gate: Passed
+2025-04-05 00:58:35,423 - 127.0.0.1 - - [05/Apr/2025 00:58:35] "POST /run_test HTTP/1.1" 200 -
+2025-04-05 00:58:38,056 - Waveform view launched for nand_gate.
+2025-04-05 00:58:38,056 - 127.0.0.1 - - [05/Apr/2025 00:58:38] "POST /run_waveform HTTP/1.1" 200 -
+2025-04-05 00:58:41,660 - Synthesis started for nand_gate.
+2025-04-05 00:58:41,660 - 127.0.0.1 - - [05/Apr/2025 00:58:41] "POST /run_synthesis HTTP/1.1" 200 -
+2025-04-05 00:58:45,624 - 127.0.0.1 - - [05/Apr/2025 00:58:45] "POST /get_truth_table HTTP/1.1" 200 -

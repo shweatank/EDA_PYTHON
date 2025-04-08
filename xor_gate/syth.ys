@@ -1,0 +1,3 @@
+read_verilog xor_gate.v
+synth -top xor_gate
+write_verilog xor_gate_netlist.v

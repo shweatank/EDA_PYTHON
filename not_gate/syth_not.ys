@@ -1,0 +1,3 @@
+read_verilog /home/mirafra/PycharmProjects/Eda_project/not_gate/not_gate.v
+synth -top not_gate
+write_verilog /home/mirafra/PycharmProjects/Eda_project/not_gate/not_netlist.v

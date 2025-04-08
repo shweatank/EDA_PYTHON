@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1743847139" />
+    <testcase name="test_xor_gate" classname="test_xor" file="/home/mirafra/PycharmProjects/Eda_project/xor_main/test_xor.py" lineno="5" time="0.0005674362182617188" sim_time_ns="20.001" ratio_time="35248.01441344538" />
+  </testsuite>
+</testsuites>
