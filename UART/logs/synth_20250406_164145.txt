@@ -1,0 +1,98 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Running command `read_verilog uart_tx.v; proc; show' --
+
+1. Executing Verilog-2005 frontend: uart_tx.v
+Parsing Verilog input from `uart_tx.v' to AST representation.
+Generating RTLIL representation for module `\uart_tx'.
+uart_tx.v:42: Warning: Ignoring call to system task $dumpfile.
+uart_tx.v:43: Warning: Ignoring call to system task $dumpvars.
+Successfully finished Verilog frontend.
+
+2. Executing PROC pass (convert processes to netlists).
+
+2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `uart_tx.$proc$uart_tx.v:41$11'.
+Cleaned up 0 empty switches.
+
+2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$uart_tx.v:15$1 in module uart_tx.
+Removed a total of 0 dead cases.
+
+2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\uart_tx.$proc$uart_tx.v:13$10'.
+  Set init value: \busy = 1'0
+Found init rule in `\uart_tx.$proc$uart_tx.v:5$9'.
+  Set init value: \tx = 1'1
+
+2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\uart_tx.$proc$uart_tx.v:13$10'.
+     1/1: $1\busy[0:0]
+Creating decoders for process `\uart_tx.$proc$uart_tx.v:5$9'.
+     1/1: $1\tx[0:0]
+Creating decoders for process `\uart_tx.$proc$uart_tx.v:15$1'.
+     1/6: $0\tx[0:0]
+     2/6: $0\bit_cnt[3:0]
+     3/6: $0\done[0:0]
+     4/6: $0\busy[0:0]
+     5/6: $0\baud_cnt[3:0]
+     6/6: $0\shift_reg[9:0]
+
+2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\uart_tx.\shift_reg' using process `\uart_tx.$proc$uart_tx.v:15$1'.
+  created $dff cell `$procdff$69' with positive edge clock.
+Creating register for signal `\uart_tx.\baud_cnt' using process `\uart_tx.$proc$uart_tx.v:15$1'.
+  created $dff cell `$procdff$70' with positive edge clock.
+Creating register for signal `\uart_tx.\busy' using process `\uart_tx.$proc$uart_tx.v:15$1'.
+  created $dff cell `$procdff$71' with positive edge clock.
+Creating register for signal `\uart_tx.\done' using process `\uart_tx.$proc$uart_tx.v:15$1'.
+  created $dff cell `$procdff$72' with positive edge clock.
+Creating register for signal `\uart_tx.\bit_cnt' using process `\uart_tx.$proc$uart_tx.v:15$1'.
+  created $dff cell `$procdff$73' with positive edge clock.
+Creating register for signal `\uart_tx.\tx' using process `\uart_tx.$proc$uart_tx.v:15$1'.
+  created $dff cell `$procdff$74' with positive edge clock.
+
+2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `uart_tx.$proc$uart_tx.v:13$10'.
+Removing empty process `uart_tx.$proc$uart_tx.v:5$9'.
+Found and cleaned up 4 empty switches in `\uart_tx.$proc$uart_tx.v:15$1'.
+Removing empty process `uart_tx.$proc$uart_tx.v:15$1'.
+Cleaned up 4 empty switches.
+
+3. Generating Graphviz representation of design.
+Writing dot description to `/home/mirafra/.yosys_show.dot'.
+Dumping module uart_tx to page 1.
+Exec: { test -f '/home/mirafra/.yosys_show.dot.pid' && fuser -s '/home/mirafra/.yosys_show.dot.pid'; } || ( echo $$ >&3; exec xdot '/home/mirafra/.yosys_show.dot'; ) 3> '/home/mirafra/.yosys_show.dot.pid' &
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 0a7572c15e
+CPU: user 0.00s system 0.00s, MEM: 15.35 MB total, 9.58 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 28% 2x read_verilog (0 sec), 27% 1x show (0 sec), ...
+

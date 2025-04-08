@@ -1,0 +1,2 @@
+
+bash: /home/mirafra/PycharmProjects/UART/run_test.sh: No such file or directory

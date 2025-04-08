@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744093022" />
+    <testcase name="uart_transmit_test" classname="test_uart_tx" file="/home/mirafra/PycharmProjects/UART/test_uart_tx.py" lineno="6" time="0.007329702377319336" sim_time_ns="1025.001" ratio_time="139842.1037082913" />
+  </testsuite>
+</testsuites>

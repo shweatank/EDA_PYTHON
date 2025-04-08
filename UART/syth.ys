@@ -1,0 +1,6 @@
+read_verilog uart_tx.v
+synth -top uart_tx
+write_verilog results/netlist.v
+write_json results/netlist.json
+write_edif results/netlist.edif
+show -format dot -prefix results/netlist
