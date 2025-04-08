@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAM Test Simulation Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      color: white;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ffffff20;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      color: #ffcc00;
+      margin-bottom: 30px;
+    }
+    .controls {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #ffaa00;
+    }
+    .status {
+      text-align: center;
+      font-size: 1.4em;
+      margin: 10px 0;
+    }
+    .log-section {
+      background-color: #000000aa;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: auto;
+      max-height: 300px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 0.95em;
+    }
+    .loader {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      border-top-color: #ffcc00;
+      animation: spin 1s infinite linear;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .tabs {
+      margin-top: 30px;
+    }
+    .tab {
+      background: #444;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .tab h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RAM Test Simulation Dashboard</h1>
+
+    <div class="controls">
+      <button onclick="runTest()">▶ Run Test</button>
+      <button onclick="runSynthesis()">🛠 Run Synthesis</button>
+      <button onclick="runWaveform()">📈 View Waveform</button>
+    </div>
+
+    <div class="status">
+      <strong>Test Result:</strong> <span id="status">⏳ Waiting for simulation...</span>
+    </div>
+
+    <div class="tabs">
+      <div class="tab">
+        <h3>🧪 Test Output</h3>
+        <div class="log-section" id="testOutput">Test output will appear here...</div>
+      </div>
+      <div class="tab">
+        <h3>🔧 Synthesis Output</h3>
+        <div class="log-section" id="synthOutput">Synthesis output will appear here...</div>
+      </div>
+      <div class="tab">
+        <h3>🪵 Logs</h3>
+        <div class="log-section" id="logOutput">Logs will appear here...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setStatus(message, isLoader = true) {
+      const loader = isLoader ? '<span class="loader"></span> ' : '';
+      document.getElementById("status").innerHTML = loader + message;
+    }
+
+    function runTest() {
+      setStatus("Running test...");
+      fetch("/run_test", { method: "POST" })
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("testOutput").textContent = data.output || data.error || "No output received.";
+          document.getElementById("status").textContent = data.status;
+          loadLogs();
+        });
+    }
+
+    function runSynthesis() {
+      setStatus("Synthesizing...");
+      fetch("/run_synthesis", { method: "POST" })
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("synthOutput").textContent = data.output || data.error || "No output received.";
+          document.getElementById("status").textContent = data.status;
+          loadLogs();
+        });
+    }
+
+    function runWaveform() {
+      setStatus("Opening GTKWave...");
+      fetch("/run_waveform", { method: "POST" })
+        .then(res => res.json())
+        .then(data => {
+          alert(data.message || data.error);
+          document.getElementById("status").textContent = data.status;
+          loadLogs();
+        });
+    }
+
+    function loadLogs() {
+      fetch("/get_logs")
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("logOutput").textContent = data.logs || "No logs available.";
+        });
+    }
+
+    window.onload = loadLogs;
+  </script>
+</body>
+</html>
