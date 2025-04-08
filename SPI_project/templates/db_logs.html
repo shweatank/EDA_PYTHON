@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🗂️ Stored Files - SPI Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .glass {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-white">
+
+    <div class="glass max-w-6xl w-full p-8">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-4xl font-bold text-cyan-300">🗂️ Stored Files</h1>
+            <a href="/" class="bg-cyan-600 hover:bg-cyan-800 transition px-4 py-2 rounded text-white font-medium">⬅ Back to Dashboard</a>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-gray-900 text-white rounded-lg shadow-inner border border-cyan-400">
+                <thead class="bg-cyan-800 text-cyan-100">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-sm font-semibold">📄 ID</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold">🕒 Timestamp</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold">⚙️ Action</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold">📁 File Path</th>
+                        <th class="px-6 py-3 text-left text-sm font-semibold">⬇️ Download</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-cyan-700 text-sm text-green-200">
+                    {% for log in logs %}
+                    <tr class="hover:bg-cyan-900/40 transition">
+                        <td class="px-6 py-4">{{ loop.index }}</td>
+                        <td class="px-6 py-4">{{ log[0] }}</td>
+                        <td class="px-6 py-4">{{ log[1] }}</td>
+                        <td class="px-6 py-4">{{ log[2] }}</td>
+                        <td class="px-6 py-4">
+                            <a href="/download_file/{{ log[3] }}" class="text-cyan-300 hover:underline">Download</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

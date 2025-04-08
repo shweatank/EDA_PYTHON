@@ -1,0 +1,6 @@
+
+        read_verilog spi_master.v
+        hierarchy -check -top spi_master
+        proc
+        show -format dot -prefix spi_master_synth
+        

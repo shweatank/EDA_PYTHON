@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744093697" />
+    <testcase name="spi_ml_test" classname="test_cocotb_ml" file="/home/mirafra/PycharmProjects/SPI_project/ml/test_cocotb_ml.py" lineno="7" time="0.38388895988464355" sim_time_ns="20995.001" ratio_time="54690.29639797112" />
+  </testsuite>
+</testsuites>

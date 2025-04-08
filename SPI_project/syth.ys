@@ -1,0 +1,7 @@
+read_verilog spi_master.v #load verilog source
+# Synthesize for generic FPGA
+synth -top spi_master #Specifies the top module (entry point) of our design
+write_json spi_master.json
+write_verilog synth_spi_master.v
+show -format dot -prefix spi_master
+write_dot spi_master.dot

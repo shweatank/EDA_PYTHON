@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744093687" />
+    <testcase name="spi_transfer_csv_tests" classname="test_spi_master" file="/home/mirafra/PycharmProjects/SPI_project/test_spi_master.py" lineno="6" time="0.012020349502563477" sim_time_ns="995.001" ratio_time="82776.37848947775" />
+  </testsuite>
+</testsuites>

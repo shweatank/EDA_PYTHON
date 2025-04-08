@@ -1,0 +1,82 @@
+make: Entering directory '/home/mirafra/PycharmProjects/SPI_project/ml'
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/mirafra/PycharmProjects/SPI_project/ml'
+rm -f results.xml
+MODULE=test_cocotb_ml TESTCASE= TOPLEVEL=spi_master TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/mirafra/PycharmProjects/SPI_project/.venv/lib/python3.10/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/mirafra/PycharmProjects/SPI_project/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/mirafra/PycharmProjects/SPI_project/.venv/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1744028454
+     0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+     0.00ns INFO     cocotb.regression                  Found test test_cocotb_ml.spi_ml_test
+     0.00ns INFO     cocotb.regression                  running spi_ml_test (1/1)
+                                                          SPI Master Test with ML Model Training (with live accuracy logging)
+   415.00ns INFO     cocotb                             [1/50] ML Model Accuracy after transfer 1: 1.0000
+   835.00ns INFO     cocotb                             [2/50] ML Model Accuracy after transfer 2: 1.0000
+  1255.00ns INFO     cocotb                             [3/50] ML Model Accuracy after transfer 3: 1.0000
+  1675.00ns INFO     cocotb                             [4/50] ML Model Accuracy after transfer 4: 1.0000
+  2095.00ns INFO     cocotb                             [5/50] ML Model Accuracy after transfer 5: 1.0000
+  2515.00ns INFO     cocotb                             [6/50] ML Model Accuracy after transfer 6: 1.0000
+  2935.00ns INFO     cocotb                             [7/50] ML Model Accuracy after transfer 7: 1.0000
+  3355.00ns INFO     cocotb                             [8/50] ML Model Accuracy after transfer 8: 1.0000
+  3775.00ns INFO     cocotb                             [9/50] ML Model Accuracy after transfer 9: 1.0000
+  4195.00ns INFO     cocotb                             [10/50] ML Model Accuracy after transfer 10: 1.0000
+  4615.00ns INFO     cocotb                             [11/50] ML Model Accuracy after transfer 11: 1.0000
+  5035.00ns INFO     cocotb                             [12/50] ML Model Accuracy after transfer 12: 1.0000
+  5455.00ns INFO     cocotb                             [13/50] ML Model Accuracy after transfer 13: 1.0000
+  5875.00ns INFO     cocotb                             [14/50] ML Model Accuracy after transfer 14: 1.0000
+  6295.00ns INFO     cocotb                             [15/50] ML Model Accuracy after transfer 15: 1.0000
+  6715.00ns INFO     cocotb                             [16/50] ML Model Accuracy after transfer 16: 1.0000
+  7135.00ns INFO     cocotb                             [17/50] ML Model Accuracy after transfer 17: 1.0000
+  7555.00ns INFO     cocotb                             [18/50] ML Model Accuracy after transfer 18: 1.0000
+  7975.00ns INFO     cocotb                             [19/50] ML Model Accuracy after transfer 19: 1.0000
+  8395.00ns INFO     cocotb                             [20/50] ML Model Accuracy after transfer 20: 1.0000
+  8815.00ns INFO     cocotb                             [21/50] ML Model Accuracy after transfer 21: 1.0000
+  9235.00ns INFO     cocotb                             [22/50] ML Model Accuracy after transfer 22: 1.0000
+  9655.00ns INFO     cocotb                             [23/50] ML Model Accuracy after transfer 23: 1.0000
+ 10075.00ns INFO     cocotb                             [24/50] ML Model Accuracy after transfer 24: 1.0000
+ 10495.00ns INFO     cocotb                             [25/50] ML Model Accuracy after transfer 25: 1.0000
+ 10915.00ns INFO     cocotb                             [26/50] ML Model Accuracy after transfer 26: 1.0000
+ 11335.00ns INFO     cocotb                             [27/50] ML Model Accuracy after transfer 27: 1.0000
+ 11755.00ns INFO     cocotb                             [28/50] ML Model Accuracy after transfer 28: 1.0000
+ 12175.00ns INFO     cocotb                             [29/50] ML Model Accuracy after transfer 29: 1.0000
+ 12595.00ns INFO     cocotb                             [30/50] ML Model Accuracy after transfer 30: 1.0000
+ 13015.00ns INFO     cocotb                             [31/50] ML Model Accuracy after transfer 31: 1.0000
+ 13435.00ns INFO     cocotb                             [32/50] ML Model Accuracy after transfer 32: 1.0000
+ 13855.00ns INFO     cocotb                             [33/50] ML Model Accuracy after transfer 33: 1.0000
+ 14275.00ns INFO     cocotb                             [34/50] ML Model Accuracy after transfer 34: 1.0000
+ 14695.00ns INFO     cocotb                             [35/50] ML Model Accuracy after transfer 35: 1.0000
+ 15115.00ns INFO     cocotb                             [36/50] ML Model Accuracy after transfer 36: 1.0000
+ 15535.00ns INFO     cocotb                             [37/50] ML Model Accuracy after transfer 37: 1.0000
+ 15955.00ns INFO     cocotb                             [38/50] ML Model Accuracy after transfer 38: 1.0000
+ 16375.00ns INFO     cocotb                             [39/50] ML Model Accuracy after transfer 39: 1.0000
+ 16795.00ns INFO     cocotb                             [40/50] ML Model Accuracy after transfer 40: 1.0000
+ 17215.00ns INFO     cocotb                             [41/50] ML Model Accuracy after transfer 41: 1.0000
+ 17635.00ns INFO     cocotb                             [42/50] ML Model Accuracy after transfer 42: 1.0000
+ 18055.00ns INFO     cocotb                             [43/50] ML Model Accuracy after transfer 43: 1.0000
+ 18475.00ns INFO     cocotb                             [44/50] ML Model Accuracy after transfer 44: 1.0000
+ 18895.00ns INFO     cocotb                             [45/50] ML Model Accuracy after transfer 45: 1.0000
+ 19315.00ns INFO     cocotb                             [46/50] ML Model Accuracy after transfer 46: 1.0000
+ 19735.00ns INFO     cocotb                             [47/50] ML Model Accuracy after transfer 47: 1.0000
+ 20155.00ns INFO     cocotb                             [48/50] ML Model Accuracy after transfer 48: 1.0000
+ 20575.00ns INFO     cocotb                             [49/50] ML Model Accuracy after transfer 49: 1.0000
+ 20995.00ns INFO     cocotb                             [50/50] ML Model Accuracy after transfer 50: 1.0000
+ 20995.00ns INFO     cocotb                             Simulation completed with 1 skipped samples due to unresolvable values.
+ 20995.00ns INFO     cocotb.regression                  spi_ml_test passed
+ 20995.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_cocotb_ml.spi_ml_test     PASS       20995.00           0.39      53970.97  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0              20995.00           0.90      23297.39  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile spi_master.vcd opened for output.
+FST warning: sim_build/cocotb_iverilog_dump.v:3: $dumpfile called after $dumpvars started,
+                                                 using existing file (spi_master.vcd).
+FST warning: ignoring signals in previously scanned scope spi_master.
+make[1]: Leaving directory '/home/mirafra/PycharmProjects/SPI_project/ml'
+make: Leaving directory '/home/mirafra/PycharmProjects/SPI_project/ml'
