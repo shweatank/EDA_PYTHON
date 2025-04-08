@@ -1,0 +1,114 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>ALU Operations</title>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">-->
+<!--    <style>-->
+<!--      body {-->
+<!--            margin: 0;-->
+<!--            background-color: #0d0d0d;-->
+<!--            font-family: 'Orbitron', sans-serif;-->
+<!--            color: white;-->
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--            height: 100vh;-->
+<!--        }-->
+<!--        .container {-->
+<!--            text-align: center;-->
+<!--            background: #111;-->
+<!--            padding: 40px;-->
+<!--            border-radius: 20px;-->
+<!--            box-shadow: 0 0 25px #0ff;-->
+<!--        }-->
+<!--        h1 {-->
+<!--            font-size: 28px;-->
+<!--            margin-bottom: 30px;-->
+<!--        }-->
+<!--        .btn {-->
+<!--            margin: 10px;-->
+<!--            padding: 15px 25px;-->
+<!--            font-size: 16px;-->
+<!--            border: 2px solid #0ff;-->
+<!--            border-radius: 10px;-->
+<!--            background-color: transparent;-->
+<!--            color: white;-->
+<!--            cursor: pointer;-->
+<!--            transition: 0.3s;-->
+<!--        }-->
+<!--        .btn:hover {-->
+<!--            background-color: #0ff;-->
+<!--            color: #000;-->
+<!--            transform: scale(1.05);-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h1>🔧 RTL 2 SILICON</h1>-->
+<!--        <form method="POST" action="/action">-->
+<!--            {% for op in ['alu'] %}-->
+<!--                <button type="submit" name="operation" value="{{ op }}" class="btn">{{ op|upper }}</button>-->
+<!--            {% endfor %}-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ALU Operations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+      body {
+            margin: 0;
+            background-color: #0d0d0d;
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #111;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px #0ff;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            margin: 10px;
+            padding: 15px; /* Keep original height */
+            width: 300px; /* Increased width */
+            font-size: 16px;
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #0ff;
+            color: #000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 RTL 2 SILICON</h1>
+        <form method="POST" action="/action">
+            {% for op in ['alu'] %}
+                <button type="submit" name="operation" value="{{ op }}" class="btn">{{ op|upper }}</button>
+            {% endfor %}
+        </form>
+    </div>
+</body>
+</html>

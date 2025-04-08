@@ -1,0 +1,3 @@
+read_verilog verilog/alu.v
+synth -top alu
+write_json alu.json

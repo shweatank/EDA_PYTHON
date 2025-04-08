@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744093481" />
+    <testcase name="test_alu_with_ml_learning" classname="test_cases.test_alu" file="/home/mirafra/PycharmProjects/eda_441/test_cases/test_alu.py" lineno="7" time="0.6486761569976807" sim_time_ns="10.001" ratio_time="15.417554494816676">
+      <failure message="Test failed with RANDOM_SEED=1744093481" />
+    </testcase>
+  </testsuite>
+</testsuites>
