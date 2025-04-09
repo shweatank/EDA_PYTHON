@@ -1,0 +1,3 @@
+read_verilog i2c.v
+synth -top i2c_master
+write_verilog i2c_master_synth.json

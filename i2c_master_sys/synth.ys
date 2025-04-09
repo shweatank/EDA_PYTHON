@@ -1,0 +1,8 @@
+# Read the Verilog file
+read_verilog i2c_master.v
+
+# Elaborate the top module
+synth -top i2c_master
+
+# Output gate-level netlist in Verilog
+write_verilog i2c_master_synth.v

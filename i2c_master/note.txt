@@ -1,0 +1,11 @@
+i2c_master.v // copy and paste 
+i2c_master_tb.v // write test_bench for vcd
+
+// run these commands for vcd
+iverilog -o i2c_master_tb i2c_master.v i2c_master_tb.v
+vvp i2c_master_tb
+gtkwave i2c_master.vcd
+
+// write a Makefile
+
+run command make 

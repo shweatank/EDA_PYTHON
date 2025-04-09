@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I2C Verification Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --danger: #ef4444;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--light);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            padding: 1.5rem 2rem;
+            background: var(--card-bg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h1::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            mask-size: cover;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .control-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .process-group {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .process-group:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .process-group:nth-child(1) h3::before {
+            content: '\f085';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .process-group:nth-child(2) h3::before {
+            content: '\f1c9';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--secondary);
+        }
+
+        .process-group:nth-child(3) h3::before {
+            content: '\f233';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--warning);
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button i {
+            font-size: 1rem;
+        }
+
+        .output-panel {
+            background: var(--dark);
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 0 0 1rem 1rem;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .output-panel h3 {
+            color: white;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #output {
+            white-space: pre-wrap;
+            overflow-y: auto;
+            max-height: 400px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            min-height: 200px;
+        }
+
+        #schematic {
+            max-width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 5px;
+            background: white;
+            margin-top: 1rem;
+            display: none;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        #loading {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-weight: 400;
+            font-size: 0.875rem;
+        }
+
+        #loading::after {
+            content: '';
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid var(--gray);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .control-panel {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+        }
+
+        /* Terminal-like scrollbar */
+        #output::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #output::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        #output::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        /* Pulse animation for buttons when process is running */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+        }
+
+        /* Status indicator */
+        .status-indicator {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I2C Verification Dashboard</h1>
+        
+        <div class="control-panel">
+            <div class="process-group">
+                <h3>RTL Verification</h3>
+                <button onclick="runProcess('rtl')">
+                    <i class="fas fa-play"></i> Run Test
+                </button>
+                <button onclick="runProcess('gtkwave')">
+                    <i class="fas fa-wave-square"></i> View Waves
+                </button>
+            </div>
+            
+            <div class="process-group">
+                <h3>Yosys Operations</h3>
+                <button onclick="runProcess('synthesis')">
+                    <i class="fas fa-cogs"></i> Run Synthesis
+                </button>
+                <button onclick="runProcess('schematic')">
+                    <i class="fas fa-project-diagram"></i> Generate Schematic
+                </button>
+            </div>
+            
+            <div class="process-group">
+                <h3>Netlist Verification</h3>
+                <button onclick="runProcess('netlist')">
+                    <i class="fas fa-check-double"></i> Run Test
+                </button>
+            </div>
+        </div>
+        
+        <div class="output-panel">
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>System Ready</span>
+            </div>
+            <h3>Process Output <span id="loading" style="display:none;"></span></h3>
+            <pre id="output"></pre>
+            <img id="schematic" src="" alt="Schematic will appear here">
+        </div>
+    </div>
+
+    <script>
+        const output = document.getElementById('output');
+        const schematicImg = document.getElementById('schematic');
+        const loadingIndicator = document.getElementById('loading');
+        const statusIndicator = document.querySelector('.status-indicator span');
+        const statusDot = document.querySelector('.status-dot');
+        
+        function runProcess(type) {
+            // Clear previous output and hide schematic
+            output.textContent = `>> Starting ${type} process...\n\n`;
+            if (type === 'schematic') {
+                schematicImg.style.display = 'none';
+            }
+            loadingIndicator.style.display = 'inline-flex';
+            
+            // Update status indicator
+            statusIndicator.textContent = `Running: ${type}`;
+            statusDot.style.background = 'var(--warning)';
+            statusDot.style.animation = 'pulse 1.5s infinite';
+            
+            // Add pulse effect to clicked button
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(btn => {
+                if (btn.onclick && btn.onclick.toString().includes(type)) {
+                    btn.classList.add('pulse');
+                } else {
+                    btn.classList.remove('pulse');
+                }
+            });
+            
+            const eventSource = new EventSource(`/run?type=${type}`);
+            
+            eventSource.onmessage = function(e) {
+                if (e.data.includes("PROCESS_COMPLETE")) {
+                    eventSource.close();
+                    loadingIndicator.style.display = 'none';
+                    
+                    // Update status indicator
+                    statusIndicator.textContent = 'System Ready';
+                    statusDot.style.background = 'var(--success)';
+                    statusDot.style.animation = 'pulse 2s infinite';
+                    
+                    // Remove pulse from all buttons
+                    buttons.forEach(btn => btn.classList.remove('pulse'));
+                    
+                    // Handle schematic completion
+                    if (type === 'schematic') {
+                        // Add timestamp to bypass cache
+                        const timestamp = new Date().getTime();
+                        schematicImg.src = `/schematic?${timestamp}`;
+                        schematicImg.style.display = 'block';
+                    }
+                    
+                    output.textContent += `\n>> Process ${type} completed successfully at ${new Date().toLocaleTimeString()}\n`;
+                } else {
+                    output.textContent += e.data.replace('data: ', '');
+                    output.scrollTop = output.scrollHeight;
+                }
+            };
+            
+            eventSource.onerror = function() {
+                eventSource.close();
+                output.textContent += "\n>> Process terminated or connection lost\n";
+                loadingIndicator.style.display = 'none';
+                
+                // Update status indicator
+                statusIndicator.textContent = 'Error Occurred';
+                statusDot.style.background = 'var(--danger)';
+                statusDot.style.animation = 'none';
+                
+                // Remove pulse from all buttons
+                buttons.forEach(btn => btn.classList.remove('pulse'));
+            };
+        }
+    </script>
+</body>
+</html>

@@ -121,6 +121,10 @@ def simulate_not_logic():
     return jsonify({"message": "NOT gate simulation completed."})
 
 
+@app.route("/i2c")
+def i2c():
+    print("i2c")
+
 if __name__ == "__main__":
     init_db()
     app.run(debug=True)

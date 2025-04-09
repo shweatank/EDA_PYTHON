@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744009638" />
+    <testcase name="test_ram" classname="test_ram" file="/home/sharathm/Documents/EDA_PYTHON/ram/test_ram.py" lineno="31" time="0.1998732089996338" sim_time_ns="520.001" ratio_time="2601.654331776665" />
+  </testsuite>
+</testsuites>

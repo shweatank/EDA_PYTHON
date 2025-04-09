@@ -1,0 +1,1286 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a060)",
+  "modules": {
+    "i2c_master": {
+      "attributes": {
+        "src": "i2c_master.v:1.1-32.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "start": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "addr": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10 ]
+        },
+        "data": {
+          "direction": "input",
+          "bits": [ 11, 12, 13, 14, 15, 16, 17, 18 ]
+        },
+        "scl": {
+          "direction": "output",
+          "bits": [ 19 ]
+        },
+        "sda": {
+          "direction": "output",
+          "bits": [ 20 ]
+        }
+      },
+      "cells": {
+        "$abc$339$auto$blifparse.cc:386:parse_blif$340": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$341": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 19 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$343": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 23 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$344": {
+          "hide_name": 1,
+          "type": "$_NOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 21 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$345": {
+          "hide_name": 1,
+          "type": "$_OR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 28 ],
+            "B": [ 29 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$346": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 30 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$347": {
+          "hide_name": 1,
+          "type": "$_NOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 31 ],
+            "B": [ 19 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$348": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 29 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$350": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 35 ],
+            "S": [ 21 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$351": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37 ],
+            "B": [ 38 ],
+            "S": [ 21 ],
+            "Y": [ 39 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$352": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 36 ],
+            "B": [ 39 ],
+            "S": [ 26 ],
+            "Y": [ 40 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$353": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 41 ],
+            "B": [ 42 ],
+            "S": [ 21 ],
+            "Y": [ 43 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$354": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 44 ],
+            "B": [ 45 ],
+            "S": [ 21 ],
+            "Y": [ 46 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$355": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 43 ],
+            "B": [ 46 ],
+            "S": [ 26 ],
+            "Y": [ 47 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$356": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 40 ],
+            "B": [ 47 ],
+            "S": [ 29 ],
+            "Y": [ 48 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$357": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 49 ],
+            "B": [ 21 ],
+            "Y": [ 50 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$358": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 51 ],
+            "B": [ 52 ],
+            "S": [ 21 ],
+            "Y": [ 53 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$359": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 50 ],
+            "B": [ 53 ],
+            "S": [ 26 ],
+            "Y": [ 54 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$360": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 55 ],
+            "B": [ 56 ],
+            "S": [ 21 ],
+            "Y": [ 57 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$361": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 58 ],
+            "B": [ 59 ],
+            "S": [ 21 ],
+            "Y": [ 60 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$362": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 57 ],
+            "B": [ 60 ],
+            "S": [ 26 ],
+            "Y": [ 61 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$363": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 54 ],
+            "B": [ 61 ],
+            "S": [ 29 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$364": {
+          "hide_name": 1,
+          "type": "$_MUX_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 48 ],
+            "B": [ 62 ],
+            "S": [ 28 ],
+            "Y": [ 63 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$365": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 31 ],
+            "Y": [ 64 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$366": {
+          "hide_name": 1,
+          "type": "$_XNOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 21 ],
+            "Y": [ 65 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$367": {
+          "hide_name": 1,
+          "type": "$_OR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 21 ],
+            "Y": [ 66 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$368": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 66 ],
+            "B": [ 33 ],
+            "Y": [ 67 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$369": {
+          "hide_name": 1,
+          "type": "$_ANDNOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ 66 ],
+            "Y": [ 68 ]
+          }
+        },
+        "$abc$339$auto$blifparse.cc:386:parse_blif$370": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 68 ],
+            "B": [ 28 ],
+            "Y": [ 69 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$198": {
+          "hide_name": 1,
+          "type": "$_SDFF_PP1_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 64 ],
+            "Q": [ 23 ],
+            "R": [ 25 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$199": {
+          "hide_name": 1,
+          "type": "$_SDFFE_PP0P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 32 ],
+            "E": [ 23 ],
+            "Q": [ 19 ],
+            "R": [ 25 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$200": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 11 ],
+            "E": [ 25 ],
+            "Q": [ 34 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$201": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 12 ],
+            "E": [ 25 ],
+            "Q": [ 35 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$202": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 13 ],
+            "E": [ 25 ],
+            "Q": [ 37 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$203": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 14 ],
+            "E": [ 25 ],
+            "Q": [ 38 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$204": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 15 ],
+            "E": [ 25 ],
+            "Q": [ 41 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$205": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 16 ],
+            "E": [ 25 ],
+            "Q": [ 42 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$206": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 17 ],
+            "E": [ 25 ],
+            "Q": [ 44 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$207": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 18 ],
+            "E": [ 25 ],
+            "Q": [ 45 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$208": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 4 ],
+            "E": [ 25 ],
+            "Q": [ 49 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$209": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 5 ],
+            "E": [ 25 ],
+            "Q": [ 51 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$210": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 6 ],
+            "E": [ 25 ],
+            "Q": [ 52 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$211": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 7 ],
+            "E": [ 25 ],
+            "Q": [ 55 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$212": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 8 ],
+            "E": [ 25 ],
+            "Q": [ 56 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$213": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 9 ],
+            "E": [ 25 ],
+            "Q": [ 58 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$214": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 10 ],
+            "E": [ 25 ],
+            "Q": [ 59 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$215": {
+          "hide_name": 1,
+          "type": "$_SDFFE_PP1P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 22 ],
+            "E": [ 24 ],
+            "Q": [ 21 ],
+            "R": [ 25 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$216": {
+          "hide_name": 1,
+          "type": "$_SDFFE_PP1P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 65 ],
+            "E": [ 24 ],
+            "Q": [ 26 ],
+            "R": [ 25 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$217": {
+          "hide_name": 1,
+          "type": "$_SDFFE_PP1P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 67 ],
+            "E": [ 24 ],
+            "Q": [ 29 ],
+            "R": [ 25 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$218": {
+          "hide_name": 1,
+          "type": "$_SDFFE_PP1P_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 69 ],
+            "E": [ 24 ],
+            "Q": [ 28 ],
+            "R": [ 25 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$219": {
+          "hide_name": 1,
+          "type": "$_DFFE_PP_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "i2c_master.v:14.5-31.8"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 63 ],
+            "E": [ 24 ],
+            "Q": [ 20 ]
+          }
+        }
+      },
+      "netnames": {
+        "$abc$339$auto$opt_dff.cc:219:make_patterns_logic$52": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$logic_and$i2c_master.v:15$3_Y": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "i2c_master.v:15.13-15.27"
+          }
+        },
+        "$abc$339$new_n37_": {
+          "hide_name": 1,
+          "bits": [ 27 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n38_": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n39_": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n41_": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n43_": {
+          "hide_name": 1,
+          "bits": [ 36 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n44_": {
+          "hide_name": 1,
+          "bits": [ 39 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n45_": {
+          "hide_name": 1,
+          "bits": [ 40 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n46_": {
+          "hide_name": 1,
+          "bits": [ 43 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n47_": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n48_": {
+          "hide_name": 1,
+          "bits": [ 47 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n49_": {
+          "hide_name": 1,
+          "bits": [ 48 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n50_": {
+          "hide_name": 1,
+          "bits": [ 50 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n51_": {
+          "hide_name": 1,
+          "bits": [ 53 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n52_": {
+          "hide_name": 1,
+          "bits": [ 54 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n53_": {
+          "hide_name": 1,
+          "bits": [ 57 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n54_": {
+          "hide_name": 1,
+          "bits": [ 60 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n55_": {
+          "hide_name": 1,
+          "bits": [ 61 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n56_": {
+          "hide_name": 1,
+          "bits": [ 62 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n60_": {
+          "hide_name": 1,
+          "bits": [ 66 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$new_n62_": {
+          "hide_name": 1,
+          "bits": [ 68 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$procmux$14_Y": {
+          "hide_name": 1,
+          "bits": [ 64 ],
+          "attributes": {
+          }
+        },
+        "$abc$339$procmux$36_Y": {
+          "hide_name": 1,
+          "bits": [ 32 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$63.Y": {
+          "hide_name": 1,
+          "bits": [ 22, 65, 67, 69 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "i2c_master.v:24.28-24.39|/usr/bin/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "$shiftx$i2c_master.v:0$5.Y": {
+          "hide_name": 1,
+          "bits": [ 63 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "i2c_master.v:0.0-0.0|/usr/bin/../share/yosys/techmap.v:137.23-137.24"
+          }
+        },
+        "addr": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "i2c_master.v:4.17-4.21"
+          }
+        },
+        "bit_cnt": {
+          "hide_name": 0,
+          "bits": [ 21, 26, 29, 28 ],
+          "attributes": {
+            "init": "0000",
+            "src": "i2c_master.v:10.15-10.22"
+          }
+        },
+        "busy": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "init": "0",
+            "src": "i2c_master.v:12.9-12.13"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "i2c_master.v:2.11-2.14"
+          }
+        },
+        "data": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14, 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "i2c_master.v:5.17-5.21"
+          }
+        },
+        "scl": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "init": "0",
+            "src": "i2c_master.v:6.16-6.19"
+          }
+        },
+        "sda": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "init": "1",
+            "src": "i2c_master.v:7.16-7.19"
+          }
+        },
+        "shift_reg": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 37, 38, 41, 42, 44, 45, "0", 49, 51, 52, 55, 56, 58, 59 ],
+          "attributes": {
+            "src": "i2c_master.v:11.16-11.25"
+          }
+        },
+        "start": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "i2c_master.v:3.11-3.16"
+          }
+        }
+      }
+    }
+  }
+}

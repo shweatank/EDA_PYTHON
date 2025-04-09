@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1743940354" />
+    <testcase name="i2c_basic_write" classname="test_i2c_master" file="/home/sharathm/Documents/EDA_PYTHON/i2c_master/test_i2c_master.py" lineno="5" time="0.006235599517822266" sim_time_ns="510.001" ratio_time="81788.60726099258" />
+  </testsuite>
+</testsuites>
