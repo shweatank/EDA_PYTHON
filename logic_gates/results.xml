@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744261323" />
+    <testcase name="test_not_gate" classname="test_cases.test_not_gate" file="/home/noolimanish/Downloads/main_1proj/day_7_A/test_cases/test_not_gate.py" lineno="29" time="0.006331682205200195" sim_time_ns="20.001" ratio_time="3158.8761646270286" />
+  </testsuite>
+</testsuites>
