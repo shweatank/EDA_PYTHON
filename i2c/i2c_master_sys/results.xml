@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744089638" />
+    <testcase name="i2c_netlist_test" classname="test_netlist" file="/home/sharathm/Downloads/i2c_/i2c/i2c_master_sys/test_netlist.py" lineno="5" time="0.005606412887573242" sim_time_ns="140.001" ratio_time="24971.582151988092" />
+  </testsuite>
+</testsuites>

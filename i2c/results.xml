@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744093716" />
+    <testcase name="test_multiple_writes" classname="i2c_ml_test" file="/home/sharathm/Downloads/i2c_/i2c/i2c_ml_test.py" lineno="10" time="0.028522729873657227" sim_time_ns="660.001" ratio_time="23139.475180794598" />
+    <testcase name="test_max_address_data" classname="i2c_ml_test" file="/home/sharathm/Downloads/i2c_/i2c/i2c_ml_test.py" lineno="36" time="0.007265806198120117" sim_time_ns="320.001" ratio_time="44042.05001817883" />
+    <testcase name="test_invalid_address" classname="i2c_ml_test" file="/home/sharathm/Downloads/i2c_/i2c/i2c_ml_test.py" lineno="58" time="0.00031828880310058594" sim_time_ns="0.00100000000009004" ratio_time="3.141800749346558">
+      <failure message="Test failed with RANDOM_SEED=1744093716" />
+    </testcase>
+    <testcase name="i2c_ml_training_test" classname="i2c_ml_test" file="/home/sharathm/Downloads/i2c_/i2c/i2c_ml_test.py" lineno="82" time="0.5583102703094482" sim_time_ns="22000.001" ratio_time="39404.61454847734" />
+  </testsuite>
+</testsuites>

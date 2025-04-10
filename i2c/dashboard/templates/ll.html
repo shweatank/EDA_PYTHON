@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I2C Verification Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        /* Schematic thumbnail style */
+        #schematic {
+            max-width: 100%;
+            max-height: 250px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background: white;
+            margin-top: 10px;
+            cursor: pointer;
+            display: none;
+            transition: transform 0.2s ease;
+        }
+
+        #schematic:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        /* Modal container */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal content (large image) */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px black;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #output {
+            white-space: pre-wrap;
+            overflow-y: auto;
+            max-height: 400px;
+            background: #111;
+            color: #eee;
+            padding: 10px;
+            font-family: monospace;
+            border-radius: 6px;
+        }
+
+        .process-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .log-info { color: lightgreen; }
+        .log-debug { color: skyblue; }
+        .log-warning { color: orange; }
+        .log-error { color: orange; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">I2C Dashboard</h1>
+
+        <div class="control-panel">
+            <div class="process-group">
+                <h3 style="text-align: center;">RTL Verification</h3>
+                <button onclick="runProcess('rtl')">Run Test</button>
+                <button onclick="runProcess('gtkwave')">GTK Waveform</button>
+            </div>
+
+            <div class="process-group">
+                <h3 style="text-align: center;">Yosys Operations</h3>
+                <button onclick="runProcess('synthesis')">Run Synthesis</button>
+                <button onclick="runProcess('schematic')">Generate Schematic</button>
+            </div>
+
+            <div class="process-group">
+                <h3 style="text-align: center;">Netlist Validation</h3>
+                <button onclick="runProcess('netlist')">Run Test</button>
+            </div>
+        </div>
+
+        <div class="output-panel">
+            <h3>Process Output <span id="loading" style="display:none;color:gray">(Loading...)</span></h3>
+            <div id="output"></div>
+            <div class="img_container">
+                <img id="schematic" src="" alt="Schematic will appear here" onclick="openModal()">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for full-size schematic -->
+    <div id="imgModal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        const output = document.getElementById('output');
+        const schematicImg = document.getElementById('schematic');
+        const loadingIndicator = document.getElementById('loading');
+        const imgModal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+
+        function runProcess(type) {
+            output.innerHTML = `<span class="log-info">Running ${type}...</span><br>`;
+            schematicImg.style.display = 'none';
+            loadingIndicator.style.display = 'inline';
+
+            const eventSource = new EventSource(`/run?type=${type}`);
+
+            eventSource.onmessage = function(e) {
+                if (e.data.includes("PROCESS_COMPLETE")) {
+                    eventSource.close();
+                    loadingIndicator.style.display = 'none';
+
+                    if (type === 'schematic') {
+                        const timestamp = new Date().getTime();
+                        schematicImg.src = `/schematic?${timestamp}`;
+                        schematicImg.style.display = 'block';
+                    }
+                } else {
+                    const line = e.data.replace('data: ', '');
+                    const coloredLine = colorizeLogLine(line);
+                    output.innerHTML += coloredLine + "<br>";
+                    output.scrollTop = output.scrollHeight;
+                }
+            };
+
+            eventSource.onerror = function() {
+                eventSource.close();
+                output.innerHTML += `<span class="log-error">Process terminated or connection lost</span><br>`;
+                loadingIndicator.style.display = 'none';
+            };
+        }
+
+        function colorizeLogLine(line) {
+            if (line.includes("ERROR")) {
+                return `<span class="log-error">${line}</span>`;
+            } else if (line.includes("WARNING")) {
+                return `<span class="log-warning">${line}</span>`;
+            } else if (line.includes("DEBUG")) {
+                return `<span class="log-debug">${line}</span>`;
+            } else if (line.includes("INFO")) {
+                return `<span class="log-info">${line}</span>`;
+            }
+            return `<span>${line}</span>`;
+        }
+
+        // Show modal with full schematic
+        function openModal() {
+            modalImg.src = schematicImg.src;
+            imgModal.style.display = "flex";
+        }
+
+        // Hide modal
+        function closeModal(e) {
+            if (e.target === imgModal || e.target.className === 'close') {
+                imgModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
